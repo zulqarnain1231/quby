@@ -1,5 +1,6 @@
 import About from "./Components/Home/About";
 import Hero from "./Components/Home/Hero";
+import Join from "./Components/Home/Join";
 import KeyInovation from "./Components/Home/KeyInovation/KeyInovation";
 import Navbar from "./Components/Shared/Navigations/Navbar";
 
@@ -12,6 +13,7 @@ function App() {
       </div>
       <About />
       <KeyInovation />
+      <Join />
     </main>
   );
 }
