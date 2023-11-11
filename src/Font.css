@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Vastago";
+  src: local("Vastago"), url("./fonts/VastagoGrotesk-Black.otf") format("otf"),
+    url("./fonts/VastagoGrotesk-Bold.otf") format("otf"),
+    url("./fonts/VastagoGrotesk-ExtraLight.otf") format("otf"),
+    url("./fonts/VastagoGrotesk-Heavy.otf") format("otf"),
+    url("./fonts/VastagoGrotesk-Medium.otf") format("otf"),
+    url("./fonts/VastagoGrotesk-SemiBold.otf") format("otf"),
+    url("./fonts/VastagoGrotesk-Light.otf") format("otf"),
+    url("./fonts/VastagoGrotesk-Regular.otf") format("otf");
+}
