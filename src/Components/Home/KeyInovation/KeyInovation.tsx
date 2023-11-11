@@ -8,7 +8,7 @@ const KeyInovation = () => {
         <h2 className="text-white-main font-bold sm:text-6xl text-5xl text-center">
           Key Inovation
         </h2>
-        <div className="w-full grid grid-cols-3 gap-6">
+        <div className="w-full grid lg:grid-cols-3 gap-6">
           <div className="w-full flex flex-col items-start justify-start gap-6 bg-black-secondary rounded-2xl px-6 py-8">
             <img
               src="/Assets/KeyInovation/Key1.png"
