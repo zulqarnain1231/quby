@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.keyCard:hover {
+  border-image-slice: 1;
+  transition-duration: 200ms;
+  border-image-source: linear-gradient(
+    142.46deg,
+    #45108a 0.81%,
+    #7c1dc9 34.39%,
+    #9d40b9 63.84%,
+    #25054d 100%
+  );
+}

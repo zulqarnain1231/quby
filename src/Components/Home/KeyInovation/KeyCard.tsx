@@ -8,13 +8,13 @@ type Props = {
 
 const KeyCard: React.FC<Props> = ({ title, detail, logo }: Props) => {
   return (
-    <div className="w-full flex flex-col items-start justify-start gap-6 bg-black-secondary rounded-2xl px-6 py-8">
+    <div className="w-full flex flex-col items-start justify-start gap-6 bg-black-secondary rounded-2xl px-6 py-8 keyCard border-[3px] border-transparent cursor-pointer">
       <img
         src={logo}
-        className="h-[88px] w-[88px] object-contain pointer-events-none"
+        className="sm:h-[88px] h-[70px] w-[70px] sm:w-[88px] object-contain pointer-events-none"
         alt=""
       />
-      <p className="text-white-main font-semibold sm:text-[26px] text-[22px] leading-7 sm:leading-9 w-[85%]">
+      <p className="text-white-main font-semibold sm:text-[26px] text-[22px] leading-7 sm:leading-9 lg:w-[85%]">
         {title}
       </p>
       <p className="text-white-main font-normal text-lg sm:text-xl">{detail}</p>
