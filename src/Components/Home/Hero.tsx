@@ -1,5 +1,7 @@
 import React from "react";
 import ComponentWrapper from "../Shared/Wrappers/ComponentWrapper";
+import OutlinedBtn from "../Shared/Buttons/OutlinedBtn";
+import FilledBtn from "../Shared/Buttons/FilledBtn";
 
 const Hero = () => {
   return (
@@ -13,20 +15,16 @@ const Hero = () => {
           />
         </aside>
         <aside className="w-full h-full flex flex-col lg:items-start items-center justify-center gap-7">
-          <h1 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-let text-center">
+          <h1 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-left text-center">
             AI-Powered Blockchain Gaming
           </h1>
-          <p className="text-white-main font-normal sm:text-xl text-lg lg:w-[80%] lg:text-let text-center">
+          <p className="text-white-main font-normal sm:text-xl text-lg lg:w-[80%] lg:text-left text-center">
             Elevating Innovation, Shaping the Future with Strength and Speed for
             All
           </p>
           <div className="w-full flex items-center justify-center lg:justify-start gap-6">
-            <button className="bg-brand-main sm:px-9 px-7 py-4 text-white-main font-semibold text-base rounded-[60px]">
-              Play Game
-            </button>
-            <button className="bg-transparent sm:px-9 px-7 py-4 text-white-main font-semibold text-base rounded-[60px] border-2 border-white-main">
-              Buy Token
-            </button>
+            <FilledBtn text="Play Game" padding="sm:px-9 px-7 py-4" />
+            <OutlinedBtn text="Buy Token" padding="sm:px-9 px-7 py-4" />
           </div>
         </aside>
       </div>

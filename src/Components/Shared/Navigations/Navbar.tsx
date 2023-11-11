@@ -4,6 +4,7 @@ import { BsMedium, BsTwitter } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import { BiMenuAltRight } from "react-icons/bi";
+import FilledBtn from "../Buttons/FilledBtn";
 
 const Navbar = () => {
   return (
@@ -41,9 +42,10 @@ const Navbar = () => {
           <BsMedium className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
           <FaLinkedinIn className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
           <BsTwitter className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
-          <button className="bg-brand-main px-9 py-4 text-white-main font-semibold text-base rounded-[60px] lg:inline-block hidden">
-            Buy Token
-          </button>
+          <FilledBtn
+            text=" Buy Token"
+            padding="px-9 py-4 lg:inline-block hidden"
+          />
           <div className="h-full flex items-center justify-center gap-2">
             <img
               src="/Assets/Flag.png"
