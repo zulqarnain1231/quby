@@ -14,3 +14,32 @@
     #25054d 100%
   );
 }
+
+.rounded-gradient {
+  background: radial-gradient(
+        49.24% 58.34% at 72.89% 31.34%,
+        #00ffff 0%,
+        rgba(0, 196, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        46.06% 54.58% at 85.53% 88.1%,
+        #620ce1 0%,
+        rgba(98, 12, 225, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        65.88% 80.29% at -7.43% -4.52%,
+        #ff00e5 0%,
+        rgba(255, 0, 229, 0.771917) 22.81%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        67.75% 62.35% at 31.89% 36.7%,
+        #ff6666 0%,
+        rgba(255, 0, 184, 0.239583) 69.51%,
+        rgba(0, 82, 205, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}

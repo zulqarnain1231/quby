@@ -18,10 +18,10 @@ const AnnouncementCard: React.FC<Props> = ({
   date,
 }) => {
   return (
-    <div className="w-full flex flex-col items-start justify-start gap-4 bg-black-secondary rounded-2xl p-4">
+    <div className="w-full flex flex-col items-start justify-start gap-4 bg-black-secondary rounded-2xl p-4 z-10">
       <img
         src={image}
-        className="object-cover w-full h-[350px] rounded-2xl"
+        className="object-cover w-full sm:h-[350px] h-[270px] rounded-2xl"
         alt=""
       />
       <p className="text-white-main text-lg sm:text-xl font-normal">{date}</p>
