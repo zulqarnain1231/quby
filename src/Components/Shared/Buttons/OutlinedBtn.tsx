@@ -3,15 +3,24 @@ import React from "react";
 type Props = {
   text: string;
   padding?: string;
+  icon?: React.ReactNode;
+  link?: string;
 };
 
-const OutlinedBtn: React.FC<Props> = ({ text, padding = "px-9 py-4" }) => {
+const OutlinedBtn: React.FC<Props> = ({
+  text,
+  padding = "px-9 py-4",
+  icon,
+  link = "/",
+}) => {
   return (
-    <button
-      className={`bg-transparent ${padding} text-white-main font-semibold text-base rounded-[60px] border-2 border-white-main`}
+    <a
+      href={link}
+      className={`flex items-center justify-center gap-3 bg-transparent ${padding} text-white-main font-semibold text-base rounded-[60px] border-2 border-white-main`}
     >
       {text}
-    </button>
+      {icon}
+    </a>
   );
 };
 
