@@ -5,6 +5,7 @@ import Hero from "./Components/Home/Hero";
 import Join from "./Components/Home/Join";
 import KeyInovation from "./Components/Home/KeyInovation/KeyInovation";
 import NewsLetter from "./Components/Home/NewsLetter";
+import Footer from "./Components/Shared/Navigations/Footer";
 import Navbar from "./Components/Shared/Navigations/Navbar";
 
 function App() {
@@ -18,9 +19,10 @@ function App() {
       <KeyInovation />
       <Join />
       <Announcement />
-      <div className="w-full bg-[url('/Assets/FooterBg.png')] bg-cover bg-no-repeat bg-top -mt-96 pb-10 pt-[320px]">
+      <div className="w-full bg-[url('/Assets/FooterBg.png')] bg-cover bg-no-repeat bg-top -mt-96 pt-[320px]">
         <Collaboration />
         <NewsLetter />
+        <Footer />
       </div>
     </main>
   );
