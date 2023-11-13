@@ -13,6 +13,10 @@ import "react-modern-drawer/dist/index.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isDropDown, setIsDropDown] = useState<boolean>(false);
+  const [activeLanguage, setActiveLanguage] = useState({
+    name: "ENG",
+    logo: "/Assets/Flag.png",
+  });
   const dropDownRef = useRef<any>(null);
   useClickOutsideDetector(dropDownRef, isDropDown, () => {
     setIsDropDown(false);
@@ -20,6 +24,78 @@ const Navbar = () => {
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
+
+  const handleLanguageChange = (name: string, logo: string) => {
+    setIsDropDown(false);
+    setActiveLanguage({ name, logo });
+  };
+  const languages = [
+    {
+      name: "English",
+      logo: "/Assets/Flag.png",
+      value: "ENG",
+    },
+    {
+      name: "French",
+      logo: "/Assets/Flags/France.svg",
+      value: "FNH",
+    },
+    {
+      name: "Chinese",
+      logo: "/Assets/Flags/China.svg",
+      value: "CHI",
+    },
+    {
+      name: "Korean",
+      logo: "/Assets/Flags/Korea.svg",
+      value: "KOR",
+    },
+    {
+      name: "Dutch",
+      logo: "/Assets/Flags/Dutch.svg",
+      value: "DTC",
+    },
+    {
+      name: "Russian",
+      logo: "/Assets/Flags/Russia.svg",
+      value: "RUS",
+    },
+    {
+      name: "Japanese",
+      logo: "/Assets/Flags/Japan.svg",
+      value: "JPN",
+    },
+    {
+      name: "Portugese",
+      logo: "/Assets/Flags/Portougal.svg",
+      value: "POG",
+    },
+    {
+      name: "Spanish",
+      logo: "/Assets/Flags/Spain.svg",
+      value: "SPN",
+    },
+    {
+      name: "German",
+      logo: "/Assets/Flags/Germany.svg",
+      value: "GER",
+    },
+    {
+      name: "Italian",
+      logo: "/Assets/Flags/Italy.svg",
+      value: "ITA",
+    },
+    {
+      name: "Vietnamese",
+      logo: "/Assets/Flags/Vietnam.svg",
+      value: "VIET",
+    },
+    {
+      name: "Indonesian",
+      logo: "/Assets/Flags/Indonesia.svg",
+      value: "IND",
+    },
+  ];
   return (
     <>
       <ComponentWrapper style="bg-trasparent h-[80px]">
@@ -66,12 +142,12 @@ const Navbar = () => {
               className="h-[56px] flex items-center justify-center gap-2 group relative cursor-pointer"
             >
               <img
-                src="/Assets/Flag.png"
+                src={activeLanguage.logo}
                 className="sm:h-[44px] h-[28px] w-[28px] sm:w-[44px] object-cover rounded-full"
                 alt=""
               />
               <p className="text-white-main font-semibold sm:text-base text-sm">
-                ENG
+                {activeLanguage.name}
               </p>
               <FiChevronDown className="text-white-main text-2xl" />
             </div>
@@ -79,19 +155,24 @@ const Navbar = () => {
               ref={dropDownRef}
               className={`${
                 isDropDown ? "flex" : "hidden"
-              } absolute -bottom-[55px] right-0 z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
+              } flex-col absolute -bottom-[585px] right-0 z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
             >
-              <button
-                onClick={() => setIsDropDown(false)}
-                className="w-full flex items-center justify-start gap-2 hover:bg-black-main/20 py-2 px-4 dropdown-btn"
-              >
-                <img
-                  src="/Assets/Flag.png"
-                  className="h-[24px] w-[24px] object-cover rounded-full"
-                  alt=""
-                />
-                <p className="text-black-main font-semibold text-sm">English</p>
-              </button>
+              {languages.map((item: any, index: number) => (
+                <button
+                  key={index}
+                  onClick={() => handleLanguageChange(item.value, item.logo)}
+                  className="w-full flex items-center justify-start gap-2 hover:bg-black-main/20 py-2 px-4 dropdown-btn"
+                >
+                  <img
+                    src={item.logo}
+                    className="h-[24px] w-[24px] object-cover rounded-full"
+                    alt=""
+                  />
+                  <p className="text-black-main font-semibold text-sm">
+                    {item.name}
+                  </p>
+                </button>
+              ))}
             </div>
             <button onClick={toggleDrawer}>
               <BiMenuAltRight className="text-white-main lg:hidden inline-block text-3xl" />
