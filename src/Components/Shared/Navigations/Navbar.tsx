@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import useClickOutsideDetector from "../../../hooks/useClickOutsideDetector";
 import ComponentWrapper from "../Wrappers/ComponentWrapper";
 import { BsMedium, BsTwitter } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -10,14 +11,19 @@ import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isDropDown, setIsDropDown] = useState<boolean>(false);
+  const dropDownRef = useRef<any>(null);
+  useClickOutsideDetector(dropDownRef, isDropDown, () => {
+    setIsDropDown(false);
+  });
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
   return (
     <>
       <ComponentWrapper style="bg-trasparent h-[80px]">
-        <nav className="w-full h-full flex items-center justify-between">
+        <nav className="w-full h-full flex items-center justify-between relative">
           <div className="h-full flex items-center justify-start gap-8">
             <a href="/">
               {" "}
@@ -55,7 +61,10 @@ const Navbar = () => {
               padding="px-9 py-4 lg:inline-block hidden"
             />
             {/* language translation */}
-            <div className="h-[56px] flex items-center justify-center gap-2 group relative cursor-pointer">
+            <div
+              onClick={() => setIsDropDown(true)}
+              className="h-[56px] flex items-center justify-center gap-2 group relative cursor-pointer"
+            >
               <img
                 src="/Assets/Flag.png"
                 className="sm:h-[44px] h-[28px] w-[28px] sm:w-[44px] object-cover rounded-full"
@@ -65,16 +74,24 @@ const Navbar = () => {
                 ENG
               </p>
               <FiChevronDown className="text-white-main text-2xl" />
-              <div className="group-hover:flex hidden absolute -bottom-[65px] z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3">
-                <button className="w-full flex items-center justify-start gap-2 hover:bg-black-main/20 py-2 px-4">
-                  <img
-                    src="/Assets/Flag.png"
-                    className="h-[24px] w-[24px] object-cover rounded-full"
-                    alt=""
-                  />
-                  <p className="text-black-main font-semibold text-sm">ENG</p>
-                </button>
-              </div>
+            </div>
+            <div
+              ref={dropDownRef}
+              className={`${
+                isDropDown ? "flex" : "hidden"
+              } absolute -bottom-[55px] right-0 z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
+            >
+              <button
+                onClick={() => setIsDropDown(false)}
+                className="w-full flex items-center justify-start gap-2 hover:bg-black-main/20 py-2 px-4 dropdown-btn"
+              >
+                <img
+                  src="/Assets/Flag.png"
+                  className="h-[24px] w-[24px] object-cover rounded-full"
+                  alt=""
+                />
+                <p className="text-black-main font-semibold text-sm">English</p>
+              </button>
             </div>
             <button onClick={toggleDrawer}>
               <BiMenuAltRight className="text-white-main lg:hidden inline-block text-3xl" />
