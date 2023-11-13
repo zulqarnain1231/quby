@@ -3,10 +3,16 @@ import ComponentWrapper from "../Shared/Wrappers/ComponentWrapper";
 import SectionHeading from "../Shared/Typography/SectionHeading";
 import OutlinedBtn from "../Shared/Buttons/OutlinedBtn";
 import FilledBtn from "../Shared/Buttons/FilledBtn";
+import * as Icons from "../../constants/Svgs/Icons";
 
 const Join = () => {
   return (
-    <ComponentWrapper style="lg:py-20 py-12">
+    <ComponentWrapper style="lg:py-20 py-12 relative">
+      <Icons.Gradient
+        fill="none"
+        stroke=""
+        className="h-[900px] w-[600px] absolute -top-44 -left-36"
+      />
       <div className="w-full flex flex-col-reverse items-center justify-start lg:grid lg:grid-cols-2 lg:gap-16 gap-8">
         <aside className="w-full h-full">
           <img

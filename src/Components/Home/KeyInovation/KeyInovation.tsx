@@ -1,6 +1,7 @@
 import React from "react";
 import ComponentWrapper from "../../Shared/Wrappers/ComponentWrapper";
 import KeyCard from "./KeyCard";
+import * as Icons from "../../../constants/Svgs/Icons";
 
 const KeyInovation = () => {
   const keyPoints = [
@@ -24,7 +25,12 @@ const KeyInovation = () => {
     },
   ];
   return (
-    <ComponentWrapper style="lg:py-20 py-12">
+    <ComponentWrapper style="lg:py-20 py-12 relative">
+      <Icons.Gradient
+        fill="none"
+        stroke=""
+        className="h-[900px] w-[600px] absolute -top-28 -right-36"
+      />
       <div className="w-full flex flex-col items-start justify-start gap-12">
         <h2 className="text-white-main font-bold sm:text-6xl text-5xl text-center">
           Key Inovation
@@ -41,7 +47,7 @@ const KeyInovation = () => {
         </div>
         <img
           src="/Assets/KeyInovation/Table.png"
-          className="w-full h-[230px] md:h-[370px] lg:h-[500px] xl:h-[610px] object-fill pointer-events-none"
+          className="w-full h-[230px] md:h-[370px] lg:h-[500px] xl:h-[610px] z-10 object-fill pointer-events-none"
           alt=""
         />
       </div>

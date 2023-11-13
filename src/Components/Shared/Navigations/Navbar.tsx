@@ -54,7 +54,8 @@ const Navbar = () => {
               text=" Buy Token"
               padding="px-9 py-4 lg:inline-block hidden"
             />
-            <div className="h-full flex items-center justify-center gap-2">
+            {/* language translation */}
+            <div className="h-[56px] flex items-center justify-center gap-2 group relative cursor-pointer">
               <img
                 src="/Assets/Flag.png"
                 className="sm:h-[44px] h-[28px] w-[28px] sm:w-[44px] object-cover rounded-full"
@@ -64,6 +65,16 @@ const Navbar = () => {
                 ENG
               </p>
               <FiChevronDown className="text-white-main text-2xl" />
+              <div className="group-hover:flex hidden absolute -bottom-[65px] z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3">
+                <button className="w-full flex items-center justify-start gap-2 hover:bg-black-main/20 py-2 px-4">
+                  <img
+                    src="/Assets/Flag.png"
+                    className="h-[24px] w-[24px] object-cover rounded-full"
+                    alt=""
+                  />
+                  <p className="text-black-main font-semibold text-sm">ENG</p>
+                </button>
+              </div>
             </div>
             <button onClick={toggleDrawer}>
               <BiMenuAltRight className="text-white-main lg:hidden inline-block text-3xl" />

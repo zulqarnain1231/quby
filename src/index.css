@@ -3,6 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.gradient-border:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  border: 3px solid transparent;
+  background: linear-gradient(
+    142.46deg,
+    #45108a 0.81%,
+    #7c1dc9 34.39%,
+    #9d40b9 63.84%,
+    #25054d 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
 .keyCard:hover {
   border-image-slice: 1;
   transition-duration: 200ms;
