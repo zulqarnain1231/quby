@@ -8,7 +8,7 @@ import Navbar from "./Components/Shared/Navigations/Navbar";
 
 function App() {
   return (
-    <main className="w-full h-full bg-black-main font-vastago">
+    <main className="w-full h-full bg-black-main font-vastago overflow-hidden">
       <div className="w-full lg:h-[100dvh] bg-[url('/Assets/Hero/HeroBg.png')] bg-cover bg-no-repeat bg-center">
         <Navbar />
         <Hero />
