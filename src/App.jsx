@@ -4,6 +4,7 @@ import Collaboration from "./Components/Home/Collaboration";
 import Hero from "./Components/Home/Hero";
 import Join from "./Components/Home/Join";
 import KeyInovation from "./Components/Home/KeyInovation/KeyInovation";
+import NewsLetter from "./Components/Home/NewsLetter";
 import Navbar from "./Components/Shared/Navigations/Navbar";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Announcement />
       <div className="w-full bg-[url('/Assets/FooterBg.png')] bg-cover bg-no-repeat bg-top -mt-96 pb-10 pt-[320px]">
         <Collaboration />
+        <NewsLetter />
       </div>
     </main>
   );
