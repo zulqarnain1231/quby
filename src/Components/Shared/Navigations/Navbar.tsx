@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useClickOutsideDetector from "../../../hooks/useClickOutsideDetector";
 import ComponentWrapper from "../Wrappers/ComponentWrapper";
 import { BsMedium, BsTwitter } from "react-icons/bs";
@@ -13,6 +13,10 @@ import "react-modern-drawer/dist/index.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isDropDown, setIsDropDown] = useState<boolean>(false);
+  const [userInformation, setUserInformation] = useState({
+    ip: "",
+    location: "",
+  });
   const [activeLanguage, setActiveLanguage] = useState({
     name: "ENG",
     logo: "/Assets/Flag.png",
@@ -29,6 +33,29 @@ const Navbar = () => {
     setIsDropDown(false);
     setActiveLanguage({ name, logo });
   };
+  // getting user ip and location
+  useEffect(() => {
+    const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=at_eqnOOOsoZBAMlGcuxsuuvxVlvPZPK`;
+    fetch(apiUrl)
+      .then((response) => {
+        // Check if the request was successful (status code 200)
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Parse the JSON response
+        return response.json();
+      })
+      .then((data) => {
+        // Handle the data as needed
+
+        setUserInformation({ location: data.location.country, ip: data.ip });
+        console.log(userInformation);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching data:", error);
+      });
+  }, []);
   const languages = [
     {
       name: "English",
