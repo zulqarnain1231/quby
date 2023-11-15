@@ -1,20 +1,22 @@
 import React from "react";
 import ComponentWrapper from "../Wrappers/ComponentWrapper";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const year = new Date().getFullYear();
   const menu = [
     {
-      title: "Platform",
-      links: ["QuBy Ai Token", "QuByChain", "QuBy Dapp"],
+      title: t("Platform"),
+      links: [t("QuBy_Ai_Token"), t("QuByChain"), t("QuBy_Dapp")],
     },
     {
-      title: "Company",
-      links: ["Contact", "Blog", "Marketing"],
+      title: t("Company"),
+      links: [t("Contact"), t("Blog"), t("Marketing")],
     },
     {
-      title: "Resources",
-      links: ["Whitepaper", "Security Audit", "Whitelist"],
+      title: t("Resources"),
+      links: [t("Whitepaper"), t("Security_Audit"), t("Whitelist")],
     },
   ];
   const socailIcons = [
@@ -65,13 +67,12 @@ const Footer = () => {
               />
             </a>
             <p className="text-white-main text-sm sm:text-base font-normal lg:w-[505px]">
-              QuByChain combines gaming innovation with the allure of a
-              memecoin, bolstered by secure blockchain technolog.
+              {t("Footer_Detail")}
             </p>
             <div className="flex sm:flex-row flex-col items-start sm:items-center justify-start gap-4">
               <div className="flex flex-col items-start justify-start gap-2">
                 <p className="text-brand-main text-sm sm:text-base font-semibold">
-                  Email
+                  {t("Email")}
                 </p>
                 <p className="text-white-main text-sm sm:text-base font-normal">
                   Info@qubyai.com
@@ -79,10 +80,10 @@ const Footer = () => {
               </div>
               <div className="flex flex-col items-start justify-start gap-2">
                 <p className="text-brand-main text-sm sm:text-base font-semibold">
-                  Address
+                  {t("Address")}
                 </p>
                 <p className="text-white-main text-sm sm:text-base font-normal">
-                  650 Wellesley Street East, Toronto, Canada
+                  {t("Address_Detail")}
                 </p>
               </div>
             </div>
@@ -113,7 +114,7 @@ const Footer = () => {
         <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-start lg:gap-0 gap-8 lg:justify-between">
           <div className="flex flex-col md:flex-row  items-start md:items-center justify-start gap-5">
             <p className="text-white-main text-sm sm:text-base font-normal">
-              © {year} QuBy Ai & QuBychain All rights Reserved
+              © {year} {t("CopyRight")}
             </p>
             <div className="md:w-auto w-full flex items-center justify-start gap-5">
               {socailIcons.map((item: any, index: number) => (
@@ -132,13 +133,13 @@ const Footer = () => {
               href="/"
               className="text-white-main text-sm sm:text-base font-normal"
             >
-              Privacy Policy
+              {t("Privacy_Policy")}
             </a>
             <a
               href="/"
               className="text-white-main text-sm sm:text-base font-normal"
             >
-              Cookies
+              {t("Cookies")}
             </a>
           </div>
         </div>
