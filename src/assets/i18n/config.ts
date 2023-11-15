@@ -8,6 +8,9 @@ import translationFR from "../i18n/Translations/fra.json";
 import translationCH from "../i18n/Translations/chn.json";
 import translationKR from "../i18n/Translations/kor.json";
 import translationNL from "../i18n/Translations/nld.json";
+import translationRU from "../i18n/Translations/rus.json";
+import translationJP from "../i18n/Translations/jpn.json";
+
 const resources = {
   ENG: {
     translation: translationEN,
@@ -23,6 +26,12 @@ const resources = {
   },
   NLD: {
     translation: translationNL,
+  },
+  RUS: {
+    translation: translationRU,
+  },
+  JPN: {
+    translation: translationJP,
   },
 };
 
