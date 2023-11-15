@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ComponentWrapper from "../Shared/Wrappers/ComponentWrapper";
 import SectionHeading from "../Shared/Typography/SectionHeading";
 import OutlinedBtn from "../Shared/Buttons/OutlinedBtn";
@@ -6,6 +7,7 @@ import FilledBtn from "../Shared/Buttons/FilledBtn";
 import * as Icons from "../../constants/Svgs/Icons";
 
 const Join = () => {
+  const { t } = useTranslation();
   return (
     <ComponentWrapper style="lg:py-20 py-12 relative">
       <Icons.Gradient
@@ -22,16 +24,15 @@ const Join = () => {
           />
         </aside>
         <aside className="w-full flex flex-col lg:items-start items-center justify-center gap-8">
-          <SectionHeading text="Join QuBy Ai Space" style="lg:w-[80%]" />
+          <SectionHeading text={t("Join_Heading")} style="lg:w-[80%]" />
           <p className="text-white-main text-lg sm:text-xl font-normal lg:w-[90%] lg:text-left text-center">
-            QUBY AI Space offers a cutting-edge fusion of blockchain technology,
-            immersive gaming, meme coins, and rewarding staking.
+            {t("Join_Detail")}
           </p>
           <div className="w-full flex items-center sm:flex-row flex-col lg:justify-start justify-center gap-8">
-            <OutlinedBtn text="QuBy Ai Token" />
-            <OutlinedBtn text="QuBy Ai Staking" />
+            <OutlinedBtn text={t("QuBy_Ai_Token")} />
+            <OutlinedBtn text={t("QuBy_Ai_Staking")} />
           </div>
-          <FilledBtn text="QuBy Ai Game" padding="px-9 py-4 lg:w-[80%]" />
+          <FilledBtn text={t("QuBy_Ai_Game")} padding="px-9 py-4 lg:w-[80%]" />
         </aside>
       </div>
     </ComponentWrapper>

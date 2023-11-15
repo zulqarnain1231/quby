@@ -3,28 +3,27 @@ import ComponentWrapper from "../../Shared/Wrappers/ComponentWrapper";
 import SectionHeading from "../../Shared/Typography/SectionHeading";
 import AnnouncementCard from "./AnnouncementCard";
 import * as Icons from "../../../constants/Svgs/Icons";
-
+import { useTranslation } from "react-i18next";
 const Announcement = () => {
+  const { t } = useTranslation();
   const announcements = [
     {
-      title: "QBYCHAIN 2.0 Mainnet Upgrade Completed",
-      date: " Apr 17 2023",
+      title: t("Card1_Heading"),
+      date: t("Card1_Date"),
       image: "/Assets/Announcement/1.png",
-      detail:
-        "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac",
+      detail: t("Card1_Detail"),
     },
     {
-      title: "QBYCHAIN 2.0 Monthly Update",
-      date: " Apr 20 2023",
+      title: t("Card2_Heading"),
+      date: t("Card2_Date"),
       image: "/Assets/Announcement/2.png",
-      detail:
-        "Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac",
+      detail: t("Card2_Detail"),
     },
   ];
   return (
     <ComponentWrapper style="lg:pb-20 lg:pt-0 py-12 z-10">
       <div className="w-full flex flex-col lg:items-start items-center justify-start gap-12">
-        <SectionHeading text="Announcement" />
+        <SectionHeading text={t("Announcement_Heading")} />
         <div className="w-full grid lg:grid-cols-2 lg:gap-4 gap-10 relative">
           <Icons.Gradient
             fill="none"

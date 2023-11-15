@@ -16,7 +16,7 @@ const OutlinedBtn: React.FC<Props> = ({
   return (
     <a
       href={link}
-      className={`flex items-center justify-center gap-3 bg-transparent hover:bg-white-main/10 hover:duration-200 ${padding} text-white-main font-semibold text-base rounded-[60px] border-2 border-white-main`}
+      className={`flex items-center justify-center gap-3 bg-transparent hover:bg-white-main/10 hover:duration-200 ${padding} text-white-main font-semibold text-base text-center rounded-[60px] border-2 border-white-main`}
     >
       {text}
       {icon}

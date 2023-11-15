@@ -213,9 +213,20 @@ const Navbar = () => {
             </a>
           </div>
           <div className="h-full flex items-center justify-start gap-4">
-            <BsMedium className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
-            <FaLinkedinIn className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
-            <BsTwitter className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
+            <a href="https://medium.com/@qubyai.meme" target="_blank">
+              {" "}
+              <BsMedium className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/qubyaigame"
+              target="_blank"
+            >
+              {" "}
+              <FaLinkedinIn className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
+            </a>{" "}
+            <a href="https://twitter.com/QuByAigames" target="_blank">
+              <BsTwitter className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
+            </a>
             <FilledBtn
               text={t("Buy_Token")}
               padding="px-9 py-4 lg:inline-block hidden"

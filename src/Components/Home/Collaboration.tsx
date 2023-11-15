@@ -1,12 +1,14 @@
 import React from "react";
 import ComponentWrapper from "../Shared/Wrappers/ComponentWrapper";
 import SectionHeading from "../Shared/Typography/SectionHeading";
+import { useTranslation } from "react-i18next";
 
 const Collaboration = () => {
+  const { t } = useTranslation();
   return (
     <ComponentWrapper style="lg:py-20 py-12">
       <div className="w-full flex flex-col lg:items-start items-center justify-start gap-12">
-        <SectionHeading text="Collaboration" />
+        <SectionHeading text={t("Collaboration")} />
         <div className="w-full items-center flex justify-between lg:gap-6 gap-2">
           <img
             src="/Assets/Collaboration/Eth.png"
