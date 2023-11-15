@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import useClickOutsideDetector from "../../../hooks/useClickOutsideDetector";
 import ComponentWrapper from "../Wrappers/ComponentWrapper";
 import { BsMedium, BsTwitter } from "react-icons/bs";
@@ -11,6 +12,7 @@ import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
 const Navbar = () => {
+  const { i18n } = useTranslation();
   const languages = [
     {
       name: "English",
@@ -109,9 +111,14 @@ const Navbar = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  const handleLanguageChange = (name: string, logo: string) => {
+  const handleLanguageChange = (
+    name: string,
+    logo: string,
+    country: string
+  ) => {
     setIsDropDown(false);
     setActiveLanguage({ name, logo });
+    i18n.changeLanguage(country);
   };
   const findLanguageByCountry = (countryCode: string) => {
     // Find the language object based on the country code
@@ -123,8 +130,9 @@ const Navbar = () => {
   };
   // getting user ip and location
   useEffect(() => {
+    const corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
     const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=at_eqnOOOsoZBAMlGcuxsuuvxVlvPZPK`;
-    fetch(apiUrl)
+    fetch(`${corsAnywhereUrl}${apiUrl}`)
       .then((response) => {
         // Check if the request was successful (status code 200)
         if (!response.ok) {
@@ -236,7 +244,9 @@ const Navbar = () => {
               {languages.map((item: any, index: number) => (
                 <button
                   key={index}
-                  onClick={() => handleLanguageChange(item.value, item.logo)}
+                  onClick={() =>
+                    handleLanguageChange(item.value, item.logo, item.country)
+                  }
                   className="w-full flex items-center justify-start gap-2 hover:bg-black-main/20 py-2 px-4 dropdown-btn"
                 >
                   <img
