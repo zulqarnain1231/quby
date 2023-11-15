@@ -1,5 +1,20 @@
 {
-  "HELLO_WORLD": "Hello Kese Ho",
-  "REACT_EXAMPLE": "Ye Aik React Ki misal hao",
-  "THANK_YOU": "Shukria mere page ka!"
+  "Buy_Token": "Acheter un jeton",
+  "Play_Game": "Jouer au jeu",
+  "Read_More": "En savoir plus",
+  "Hero_Heading": "Jeu Blockchain alimenté par l'IA",
+  "Hero_Detail": "Élever l’innovation, façonner l’avenir avec force et rapidité pour tous",
+  "QuBy_Game": "Jeu QuBy",
+  "QuBy_Token": "Jeton QuBy",
+  "Documents": "Documents",
+  "About_Heading": "Qu'est-ce que le projet QuByChain ?",
+  "About_Detail1": "QuByChain est une solution révolutionnaire de blockchain de couche 2 pour Ethereum, révolutionnant la vitesse des transactions et bénéficiant aux joueurs avec des transferts d'actifs ultra-rapides. Les joueurs peuvent désormais profiter d'expériences améliorées, grâce aux délais de transaction rapides de QuByChain.",
+  "About_Detail2": "De plus, l'infrastructure robuste de QuByChain prend en charge les applications décentralisées (DApps) et permet une intégration transparente de divers projets via des contrats intelligents, contribuant ainsi à un écosystème de blockchain plus interconnecté et collaboratif.",
+  "Key_Inovation": "Innovation clé",
+  "Key1_Heading": "Faire évoluer la blockchain avec des solutions intelligentes",
+  "Key1_Detail": "Utilisez l'IA pour améliorer les processus, prendre de meilleures décisions et créer des contrats intelligents qui peuvent changer et s'exécuter d'eux-mêmes.",
+  "Key2_Heading": "Élargir les possibilités grâce à la synergie Ethereum",
+  "Key2_Detail": "Assurez-vous qu’il fonctionne correctement avec Ethereum afin de pouvoir utiliser une large gamme d’applications et de services décentralisés.",
+  "Key3_Heading": "Augmenter les hauteurs, accélérer les transactions",
+  "Key3_Detail": "Créez un réseau capable de gérer de nombreuses transactions rapidement et efficacement, et pouvant se développer selon les besoins."
 }

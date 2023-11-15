@@ -12,13 +12,13 @@ import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
 const Navbar = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const languages = [
     {
       name: "English",
       logo: "/Assets/Flag.png",
       value: "ENG",
-      country: "USA",
+      country: "ENG",
     },
     {
       name: "French",
@@ -197,19 +197,19 @@ const Navbar = () => {
               href="#"
               className="text-white-main font-semibold text-base lg:inline-block hidden"
             >
-              QuBy Game
+              {t("QuBy_Game")}
             </a>
             <a
               href="#"
               className="text-white-main font-semibold text-base lg:inline-block hidden"
             >
-              QuBy Token
+              {t("QuBy_Token")}
             </a>
             <a
               href="#"
               className="text-white-main font-semibold text-base lg:inline-block hidden"
             >
-              Documents
+              {t("Documents")}
             </a>
           </div>
           <div className="h-full flex items-center justify-start gap-4">
@@ -217,7 +217,7 @@ const Navbar = () => {
             <FaLinkedinIn className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
             <BsTwitter className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
             <FilledBtn
-              text=" Buy Token"
+              text={t("Buy_Token")}
               padding="px-9 py-4 lg:inline-block hidden"
             />
             {/* language translation */}
@@ -300,7 +300,7 @@ const Navbar = () => {
           >
             Documents
           </a>
-          <FilledBtn text=" Buy Token" padding="px-9 py-4" />
+          <FilledBtn text={t("Buy_Token")} padding="px-9 py-4" />
           <div className="w-full flex items-center justify-center gap-8">
             <BsMedium className="text-white-main text-2xl cursor-pointer" />
             <FaLinkedinIn className="text-white-main text-2xl cursor-pointer" />

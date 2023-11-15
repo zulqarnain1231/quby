@@ -1,5 +1,20 @@
 {
-  "HELLO_WORLD": "Hello World!",
-  "REACT_EXAMPLE": "This is a react translation example",
-  "THANK_YOU": "Thank you for visiting my page!"
+  "Buy_Token": "Buy Token",
+  "Play_Game": "Play Game",
+  "Read_More": "Read More",
+  "Hero_Heading": "AI-Powered Blockchain Gaming",
+  "Hero_Detail": "Elevating Innovation, Shaping the Future with Strength and Speed for All",
+  "QuBy_Game": "QuBy Game",
+  "QuBy_Token": "QuBy Token",
+  "Documents": "Documents",
+  "About_Heading": "What is QuByChain Project?",
+  "About_Detail1": "QuByChain is a groundbreaking Layer 2 blockchain solution for Ethereum, revolutionizing transaction speed and benefiting gamers with lightning-fast asset transfers. Gamers can now revel in enhanced experiences, thanks to QuByChain's swift transaction times.",
+  "About_Detail2": "Additionally, QuByChain's robust infrastructure supports decentralized applications (DApps) and enables seamless integration for various projects through smart contracts, contributing to a more interconnected and collaborative blockchain ecosystem.",
+  "Key_Inovation": "Key Inovation",
+  "Key1_Heading": "Evolutionizing Blockchain with Intelligent Solutions",
+  "Key1_Detail": "Use AI to improve processes, make better decisions, and create smart contracts that can change and execute by themselves.",
+  "Key2_Heading": "Expanding Possibilities through Ethereum Synergy",
+  "Key2_Detail": "Make sure it works smoothly with Ethereum, so you can use a wide range of decentralized apps and services.",
+  "Key3_Heading": "Scaling Heights, Accelerating Transactions",
+  "Key3_Detail": "Create a network that can handle lots of transactions quickly and efficiently, and can grow as needed."
 }

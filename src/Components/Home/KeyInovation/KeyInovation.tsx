@@ -1,26 +1,25 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ComponentWrapper from "../../Shared/Wrappers/ComponentWrapper";
 import KeyCard from "./KeyCard";
 import * as Icons from "../../../constants/Svgs/Icons";
 
 const KeyInovation = () => {
+  const { t } = useTranslation();
   const keyPoints = [
     {
-      title: "Evolutionizing Blockchain with Intelligent Solutions",
-      detail:
-        "Use AI to improve processes, make better decisions, and create smart contracts that can change and execute by themselves.",
+      title: t("Key1_Heading"),
+      detail: t("Key1_Detail"),
       logo: "/Assets/KeyInovation/Key1.png",
     },
     {
-      title: "Expanding Possibilities through Ethereum Synergy",
-      detail:
-        "Make sure it works smoothly with Ethereum, so you can use a wide range of decentralized apps and services.",
+      title: t("Key2_Heading"),
+      detail: t("Key2_Detail"),
       logo: "/Assets/KeyInovation/Key2.png",
     },
     {
-      title: "Scaling Heights, Accelerating Transactions",
-      detail:
-        "Create a network that can handle lots of transactions quickly and efficiently, and can grow as needed.",
+      title: t("Key3_Heading"),
+      detail: t("Key3_Detail"),
       logo: "/Assets/KeyInovation/Key3.png",
     },
   ];
@@ -33,7 +32,7 @@ const KeyInovation = () => {
       />
       <div className="w-full flex flex-col items-start justify-start gap-12">
         <h2 className="text-white-main font-bold sm:text-6xl text-5xl text-center">
-          Key Inovation
+          {t("Key_Inovation")}
         </h2>
         <div className="w-full grid xl:grid-cols-3 gap-6">
           {keyPoints.map((item: any, index: number) => (

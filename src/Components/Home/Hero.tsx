@@ -17,15 +17,14 @@ const Hero = () => {
         </aside>
         <aside className="w-full h-full flex flex-col lg:items-start items-center justify-center gap-7">
           <h1 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-left text-center">
-            {t("HELLO_WORLD")}
+            {t("Hero_Heading")}
           </h1>
           <p className="text-white-main font-normal sm:text-xl text-lg lg:w-[80%] lg:text-left text-center">
-            Elevating Innovation, Shaping the Future with Strength and Speed for
-            All
+            {t("Hero_Detail")}
           </p>
           <div className="w-full flex items-center justify-center lg:justify-start gap-6">
-            <FilledBtn text="Play Game" padding="sm:px-9 px-7 py-4" />
-            <OutlinedBtn text="Buy Token" padding="sm:px-9 px-7 py-4" />
+            <FilledBtn text={t("Play_Game")} padding="sm:px-9 px-7 py-4" />
+            <OutlinedBtn text={t("Buy_Token")} padding="sm:px-9 px-7 py-4" />
           </div>
         </aside>
       </div>
