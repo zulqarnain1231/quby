@@ -5,13 +5,16 @@ import { initReactI18next } from "react-i18next";
 // Import translations
 import translationEN from "../i18n/Translations/en.json";
 import translationFR from "../i18n/Translations/fra.json";
-
+import translationCH from "../i18n/Translations/chn.json";
 const resources = {
   ENG: {
     translation: translationEN,
   },
   FRA: {
     translation: translationFR,
+  },
+  CHN: {
+    translation: translationCH,
   },
 };
 
