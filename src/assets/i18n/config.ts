@@ -12,6 +12,8 @@ import translationRU from "../i18n/Translations/rus.json";
 import translationJP from "../i18n/Translations/jpn.json";
 import translationPR from "../i18n/Translations/prt.json";
 import translationES from "../i18n/Translations/esp.json";
+import translationDE from "../i18n/Translations/deu.json";
+import translationIT from "../i18n/Translations/ita.json";
 
 const resources = {
   ENG: {
@@ -40,6 +42,12 @@ const resources = {
   },
   ESP: {
     translation: translationES,
+  },
+  DEU: {
+    translation: translationDE,
+  },
+  ITA: {
+    translation: translationIT,
   },
 };
 
