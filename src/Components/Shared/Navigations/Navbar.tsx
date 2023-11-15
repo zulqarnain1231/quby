@@ -11,6 +11,86 @@ import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
 const Navbar = () => {
+  const languages = [
+    {
+      name: "English",
+      logo: "/Assets/Flag.png",
+      value: "ENG",
+      country: "USA",
+    },
+    {
+      name: "French",
+      logo: "/Assets/Flags/France.svg",
+      value: "FNH",
+      country: "FRA",
+    },
+    {
+      name: "Chinese",
+      logo: "/Assets/Flags/China.svg",
+      value: "CHI",
+      country: "CHN",
+    },
+    {
+      name: "Korean",
+      logo: "/Assets/Flags/Korea.svg",
+      value: "KOR",
+      country: "KOR",
+    },
+    {
+      name: "Dutch",
+      logo: "/Assets/Flags/Dutch.svg",
+      value: "DTC",
+      country: "NLD",
+    },
+    {
+      name: "Russian",
+      logo: "/Assets/Flags/Russia.svg",
+      value: "RUS",
+      country: "RUS",
+    },
+    {
+      name: "Japanese",
+      logo: "/Assets/Flags/Japan.svg",
+      value: "JPN",
+      country: "JPN",
+    },
+    {
+      name: "Portugese",
+      logo: "/Assets/Flags/Portougal.svg",
+      value: "POG",
+      country: "PRT",
+    },
+    {
+      name: "Spanish",
+      logo: "/Assets/Flags/Spain.svg",
+      value: "SPN",
+      country: "ESP",
+    },
+    {
+      name: "German",
+      logo: "/Assets/Flags/Germany.svg",
+      value: "GER",
+      country: "DEU",
+    },
+    {
+      name: "Italian",
+      logo: "/Assets/Flags/Italy.svg",
+      value: "ITA",
+      country: "ITA",
+    },
+    {
+      name: "Vietnamese",
+      logo: "/Assets/Flags/Vietnam.svg",
+      value: "VIET",
+      country: "VNM",
+    },
+    {
+      name: "Indonesian",
+      logo: "/Assets/Flags/Indonesia.svg",
+      value: "IDN",
+      country: "IDN",
+    },
+  ];
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isDropDown, setIsDropDown] = useState<boolean>(false);
   const [userInformation, setUserInformation] = useState({
@@ -33,6 +113,14 @@ const Navbar = () => {
     setIsDropDown(false);
     setActiveLanguage({ name, logo });
   };
+  const findLanguageByCountry = (countryCode: string) => {
+    // Find the language object based on the country code
+    const foundLanguage = languages.find(
+      (language) => language.country === countryCode
+    );
+
+    return foundLanguage || false;
+  };
   // getting user ip and location
   useEffect(() => {
     const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=at_eqnOOOsoZBAMlGcuxsuuvxVlvPZPK`;
@@ -46,83 +134,44 @@ const Navbar = () => {
         return response.json();
       })
       .then((data) => {
-        // Handle the data as needed
-
-        setUserInformation({ location: data.location.country, ip: data.ip });
-        console.log(userInformation);
+        setUserInformation({ location: "", ip: data.ip });
       })
       .catch((error) => {
         // Handle errors
         console.error("Error fetching data:", error);
       });
+
+    const locationAPiUrl = `https://ipapi.co/${userInformation.ip}/json/`;
+
+    fetch(locationAPiUrl)
+      .then(function (response) {
+        response.json().then((jsonData) => {
+          console.log(jsonData);
+          setUserInformation({
+            ip: jsonData.ip,
+            location: jsonData.country_code_iso3,
+          });
+          console.log(userInformation);
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    const selectedLanguage = findLanguageByCountry(userInformation.location);
+
+    if (selectedLanguage) {
+      setActiveLanguage({
+        logo: selectedLanguage.logo,
+        name: selectedLanguage.name,
+      });
+    } else {
+      setActiveLanguage({
+        name: "ENG",
+        logo: "/Assets/Flag.png",
+      });
+    }
   }, []);
-  const languages = [
-    {
-      name: "English",
-      logo: "/Assets/Flag.png",
-      value: "ENG",
-    },
-    {
-      name: "French",
-      logo: "/Assets/Flags/France.svg",
-      value: "FNH",
-    },
-    {
-      name: "Chinese",
-      logo: "/Assets/Flags/China.svg",
-      value: "CHI",
-    },
-    {
-      name: "Korean",
-      logo: "/Assets/Flags/Korea.svg",
-      value: "KOR",
-    },
-    {
-      name: "Dutch",
-      logo: "/Assets/Flags/Dutch.svg",
-      value: "DTC",
-    },
-    {
-      name: "Russian",
-      logo: "/Assets/Flags/Russia.svg",
-      value: "RUS",
-    },
-    {
-      name: "Japanese",
-      logo: "/Assets/Flags/Japan.svg",
-      value: "JPN",
-    },
-    {
-      name: "Portugese",
-      logo: "/Assets/Flags/Portougal.svg",
-      value: "POG",
-    },
-    {
-      name: "Spanish",
-      logo: "/Assets/Flags/Spain.svg",
-      value: "SPN",
-    },
-    {
-      name: "German",
-      logo: "/Assets/Flags/Germany.svg",
-      value: "GER",
-    },
-    {
-      name: "Italian",
-      logo: "/Assets/Flags/Italy.svg",
-      value: "ITA",
-    },
-    {
-      name: "Vietnamese",
-      logo: "/Assets/Flags/Vietnam.svg",
-      value: "VIET",
-    },
-    {
-      name: "Indonesian",
-      logo: "/Assets/Flags/Indonesia.svg",
-      value: "IND",
-    },
-  ];
+
   return (
     <>
       <ComponentWrapper style="bg-trasparent h-[80px]">

@@ -13,7 +13,7 @@ const About = () => {
         className="h-[800px] w-[570px] absolute -top-10 -left-36"
       />
       <div className="w-full grid lg:grid-cols-2 lg:gap-4 gap-10 z-10">
-        <aside className="w-full flex flex-col lg:items-start items-center justify-start gap-7">
+        <aside className="w-full flex flex-col lg:items-start items-center justify-start gap-7 z-10">
           <h2 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-left lg:w-[90%] text-center">
             What is QuByChain Project?
           </h2>
