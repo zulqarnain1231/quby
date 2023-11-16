@@ -13,6 +13,8 @@ import "react-modern-drawer/dist/index.css";
 
 const Navbar = () => {
   const { i18n, t } = useTranslation();
+
+  let location;
   const languages = [
     {
       name: "English",
@@ -95,6 +97,7 @@ const Navbar = () => {
   ];
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isDropDown, setIsDropDown] = useState<boolean>(false);
+
   const [userInformation, setUserInformation] = useState({
     ip: "",
     location: "",
@@ -130,9 +133,9 @@ const Navbar = () => {
   };
   // getting user ip and location
   useEffect(() => {
-    const corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
+    // const corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
     const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=at_eqnOOOsoZBAMlGcuxsuuvxVlvPZPK`;
-    fetch(`${corsAnywhereUrl}${apiUrl}`)
+    fetch(apiUrl)
       .then((response) => {
         // Check if the request was successful (status code 200)
         if (!response.ok) {
@@ -152,17 +155,18 @@ const Navbar = () => {
     const locationAPiUrl = `https://ipapi.co/${userInformation.ip}/json/`;
 
     fetch(locationAPiUrl)
-      .then(function (response) {
+      .then((response) => {
         response.json().then((jsonData) => {
           console.log(jsonData);
+          location = jsonData.country_code;
           setUserInformation({
             ip: jsonData.ip,
-            location: jsonData.country_code_iso3,
+            location: "",
           });
           console.log(userInformation);
         });
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       });
     const selectedLanguage = findLanguageByCountry(userInformation.location);
@@ -179,7 +183,7 @@ const Navbar = () => {
       });
     }
   }, []);
-
+  console.log(location);
   return (
     <>
       <ComponentWrapper style="bg-trasparent h-[80px]">
@@ -295,27 +299,38 @@ const Navbar = () => {
             href="#"
             className="text-white-main font-semibold text-base"
           >
-            QuBy Game
+            {t("QuBy_Game")}
           </a>
           <a
             onClick={toggleDrawer}
             href="#"
             className="text-white-main font-semibold text-base"
           >
-            QuBy Token
+            {t("QuBy_Token")}
           </a>
           <a
             onClick={toggleDrawer}
             href="#"
             className="text-white-main font-semibold text-base"
           >
-            Documents
+            {t("Documents")}
           </a>
           <FilledBtn text={t("Buy_Token")} padding="px-9 py-4" />
           <div className="w-full flex items-center justify-center gap-8">
-            <BsMedium className="text-white-main text-2xl cursor-pointer" />
-            <FaLinkedinIn className="text-white-main text-2xl cursor-pointer" />
-            <BsTwitter className="text-white-main text-2xl cursor-pointer" />
+            <a href="https://medium.com/@qubyai.meme" target="_blank">
+              {" "}
+              <BsMedium className="text-white-main text-2xl cursor-pointer" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/qubyaigame"
+              target="_blank"
+            >
+              {" "}
+              <FaLinkedinIn className="text-white-main text-2xl cursor-pointer" />
+            </a>{" "}
+            <a href="https://twitter.com/QuByAigames" target="_blank">
+              <BsTwitter className="text-white-main text-2xl cursor-pointer" />
+            </a>
           </div>
         </div>
       </Drawer>
