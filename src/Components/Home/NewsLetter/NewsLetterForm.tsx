@@ -16,11 +16,17 @@ const NewsLetterForm: React.FC<Props> = ({
 }: Props) => {
   const { t } = useTranslation();
   const [email, setEmail] = useState<string>("");
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onValidated({
       EMAIL: email,
     });
+    setIsSubmitted(true);
+    setEmail("");
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 3000);
   };
   return (
     <ComponentWrapper style="lg:py-20 py-12">
@@ -48,7 +54,10 @@ const NewsLetterForm: React.FC<Props> = ({
             />
           </div>
 
-          <FilledBtn type="submit" text={t("Subscribe")} />
+          <FilledBtn
+            type="submit"
+            text={isSubmitted ? t("Subscribed") : t("Subscribe")}
+          />
         </form>
       </div>
     </ComponentWrapper>
