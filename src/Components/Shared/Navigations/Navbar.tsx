@@ -159,13 +159,13 @@ const Navbar = () => {
     fetch(locationAPiUrl)
       .then((response) => {
         response.json().then((jsonData) => {
-          console.log(jsonData);
+          // console.log(jsonData);
           location = jsonData.country_code;
           setUserInformation({
             ip: jsonData.ip,
             location: "",
           });
-          console.log(userInformation);
+          // console.log(userInformation);
         });
       })
       .catch((error) => {
@@ -185,7 +185,7 @@ const Navbar = () => {
       });
     }
   }, []);
-  console.log(location);
+  // console.log(location);
   return (
     <>
       <ComponentWrapper style="bg-trasparent h-[80px]">

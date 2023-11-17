@@ -46,7 +46,7 @@ const KeyInovation = () => {
         </div>
         <img
           src="/Assets/KeyInovation/Table.png"
-          className="w-full h-[230px] md:h-[370px] lg:h-[500px] xl:h-[610px] z-10 object-fill pointer-events-none"
+          className="w-full h-[250px] md:h-[370px] lg:h-[550px] xl:h-[650px] z-10 object-contain  pointer-events-none"
           alt=""
         />
       </div>
