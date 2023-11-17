@@ -23,11 +23,12 @@ const Navbar = () => {
       country: "ENG",
     },
     {
-      name: "French",
-      logo: "/Assets/Flags/France.svg",
-      value: "FNH",
-      country: "FRA",
+      name: "Dutch",
+      logo: "/Assets/Flags/Dutch.svg",
+      value: "DTC",
+      country: "NLD",
     },
+
     {
       name: "Chinese",
       logo: "/Assets/Flags/China.svg",
@@ -40,17 +41,18 @@ const Navbar = () => {
       value: "KOR",
       country: "KOR",
     },
-    {
-      name: "Dutch",
-      logo: "/Assets/Flags/Dutch.svg",
-      value: "DTC",
-      country: "NLD",
-    },
+
     {
       name: "Russian",
       logo: "/Assets/Flags/Russia.svg",
       value: "RUS",
       country: "RUS",
+    },
+    {
+      name: "French",
+      logo: "/Assets/Flags/France.svg",
+      value: "FNH",
+      country: "FRA",
     },
     {
       name: "Japanese",
