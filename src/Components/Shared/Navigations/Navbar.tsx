@@ -322,7 +322,11 @@ const Navbar = () => {
           >
             {t("Documents")}
           </a>
-          <FilledBtn text={t("Buy_Token")} padding="px-9 py-4" />
+          <FilledBtn
+            onClick={toggleDrawer}
+            text={t("Staking")}
+            padding="px-9 py-4"
+          />
           <div className="w-full flex items-center justify-center gap-8">
             <a href="https://medium.com/@qubyai.meme" target="_blank">
               {" "}

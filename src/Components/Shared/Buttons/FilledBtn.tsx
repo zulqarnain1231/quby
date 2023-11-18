@@ -5,6 +5,7 @@ type Props = {
   padding?: string;
   type?: "button" | "submit";
   link?: string;
+  onClick?: any;
 };
 
 const FilledBtn: React.FC<Props> = ({
@@ -12,6 +13,7 @@ const FilledBtn: React.FC<Props> = ({
   padding = "px-9 py-4",
   type = "button",
   link,
+  onClick = () => {},
 }) => {
   return link ? (
     <a
@@ -24,6 +26,7 @@ const FilledBtn: React.FC<Props> = ({
   ) : (
     <button
       type={type}
+      onClick={onClick}
       className={`bg-brand-main hover:bg-brand-main/80 hover:duration-200 ${padding}  text-white-main text-center font-semibold text-base rounded-[60px]`}
     >
       {text}

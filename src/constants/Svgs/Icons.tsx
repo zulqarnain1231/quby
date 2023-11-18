@@ -70,7 +70,7 @@ export const Gradient: React.FC<Props> = ({
           gradientTransform="translate(884.311 741.738) rotate(165.233) scale(461.826 433.316)"
         >
           <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00C4FF" stop-opacity="0" />
+          <stop offset="1" stop-color="#00C4FF" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint1_radial_1_6411"
