@@ -26,8 +26,14 @@ const About = () => {
             {t("About_Detail2")}
           </p>
           <div className="w-full flex items-center lg:justify-start justify-center sm:gap-5 gap-3">
-            <FilledBtn text={t("Buy_Token")} />
-            <OutlinedBtn text={t("Read_More")} />
+            <FilledBtn
+              text={t("Buy_Token")}
+              link="https://www.qubyaigame.com/"
+            />
+            <OutlinedBtn
+              text={t("Read_More")}
+              link="https://quby-ai.gitbook.io/quby-ai/"
+            />
           </div>
         </aside>
         <aside className="w-full h-full flex items-center justify-center">

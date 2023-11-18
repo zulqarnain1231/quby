@@ -23,8 +23,16 @@ const Hero = () => {
             {t("Hero_Detail")}
           </p>
           <div className="w-full flex items-center justify-center lg:justify-start gap-6">
-            <FilledBtn text={t("Play_Game")} padding="sm:px-9 px-7 py-4" />
-            <OutlinedBtn text={t("Buy_Token")} padding="sm:px-9 px-7 py-4" />
+            <FilledBtn
+              text={t("Play_Game")}
+              link="https://www.qubyaigame.com/"
+              padding="sm:px-9 px-7 py-4"
+            />
+            <OutlinedBtn
+              text={t("Buy_Token")}
+              link="https://www.qubyai.com/"
+              padding="sm:px-9 px-7 py-4"
+            />
           </div>
         </aside>
       </div>

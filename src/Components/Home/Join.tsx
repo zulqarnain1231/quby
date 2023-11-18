@@ -32,7 +32,11 @@ const Join = () => {
             <OutlinedBtn text={t("QuBy_Ai_Token")} />
             <OutlinedBtn text={t("QuBy_Ai_Staking")} />
           </div>
-          <FilledBtn text={t("QuBy_Ai_Game")} padding="px-9 py-4 lg:w-[80%]" />
+          <FilledBtn
+            text={t("QuBy_Ai_Game")}
+            link="https://www.qubyaigame.com/"
+            padding="px-9 py-4 lg:w-[80%]"
+          />
         </aside>
       </div>
     </ComponentWrapper>

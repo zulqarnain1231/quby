@@ -37,7 +37,7 @@ const Announcement = () => {
               image={item.image}
               detail={item.detail}
               date={item.date}
-              link="/"
+              link="https://medium.com/@qubyai.meme"
             />
           ))}
         </div>

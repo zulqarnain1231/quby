@@ -46,7 +46,9 @@ const NewsLetterForm: React.FC<Props> = ({
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setEmail(e.target.value)
               }
-              placeholder={t("Email_Placeholder")}
+              placeholder={
+                isSubmitted ? t("Subsribed_Messege") : t("Email_Placeholder")
+              }
               className="w-full h-full bg-transparent rounded-[30px] focus:outline-none text-sm text-white-main font-normal placeholder:text-white-main"
               name=""
               id=""

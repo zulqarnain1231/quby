@@ -4,6 +4,7 @@ import useClickOutsideDetector from "../../../hooks/useClickOutsideDetector";
 import ComponentWrapper from "../Wrappers/ComponentWrapper";
 import { BsMedium, BsTwitter } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
 import { BiMenuAltRight } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
@@ -13,8 +14,6 @@ import "react-modern-drawer/dist/index.css";
 
 const Navbar = () => {
   const { i18n, t } = useTranslation();
-
-  let location;
   const languages = [
     {
       name: "English",
@@ -200,19 +199,22 @@ const Navbar = () => {
               />
             </a>
             <a
-              href="#"
+              href="https://www.qubyaigame.com/"
+              target="_blank"
               className="text-white-main font-semibold text-base lg:inline-block hidden"
             >
               {t("QuBy_Game")}
             </a>
             <a
-              href="#"
+              href="https://www.qubyai.com/"
+              target="_blank"
               className="text-white-main font-semibold text-base lg:inline-block hidden"
             >
               {t("QuBy_Token")}
             </a>
             <a
-              href="#"
+              href="https://quby-ai.gitbook.io/quby-ai/"
+              target="_blank"
               className="text-white-main font-semibold text-base lg:inline-block hidden"
             >
               {t("Documents")}
@@ -221,20 +223,20 @@ const Navbar = () => {
           <div className="h-full flex items-center justify-start gap-4">
             <a href="https://medium.com/@qubyai.meme" target="_blank">
               {" "}
-              <BsMedium className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
+              <BsMedium className="text-white-main text-2xl cursor-pointer hover:scale-110 hover:duration-300 xl:inline-block hidden" />
             </a>
             <a
               href="https://www.linkedin.com/company/qubyaigame"
               target="_blank"
             >
               {" "}
-              <FaLinkedinIn className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
+              <FaLinkedinIn className="text-white-main text-2xl cursor-pointer hover:scale-110 hover:duration-300 xl:inline-block hidden" />
             </a>{" "}
             <a href="https://twitter.com/QuByAigames" target="_blank">
-              <BsTwitter className="text-white-main text-2xl cursor-pointer xl:inline-block hidden" />
+              <FaXTwitter className="text-white-main text-2xl cursor-pointer hover:scale-110 hover:duration-300 xl:inline-block hidden" />
             </a>
             <FilledBtn
-              text={t("Buy_Token")}
+              text={t("Staking")}
               padding="px-9 py-4 lg:inline-block hidden"
             />
             {/* language translation */}
@@ -298,21 +300,24 @@ const Navbar = () => {
           </div>
           <a
             onClick={toggleDrawer}
-            href="#"
+            href="https://www.qubyaigame.com/"
+            target="_blank"
             className="text-white-main font-semibold text-base"
           >
             {t("QuBy_Game")}
           </a>
           <a
             onClick={toggleDrawer}
-            href="#"
+            href="https://www.qubyai.com/"
+            target="_blank"
             className="text-white-main font-semibold text-base"
           >
             {t("QuBy_Token")}
           </a>
           <a
             onClick={toggleDrawer}
-            href="#"
+            href="https://quby-ai.gitbook.io/quby-ai/"
+            target="_blank"
             className="text-white-main font-semibold text-base"
           >
             {t("Documents")}
@@ -331,7 +336,7 @@ const Navbar = () => {
               <FaLinkedinIn className="text-white-main text-2xl cursor-pointer" />
             </a>{" "}
             <a href="https://twitter.com/QuByAigames" target="_blank">
-              <BsTwitter className="text-white-main text-2xl cursor-pointer" />
+              <FaXTwitter className="text-white-main text-2xl cursor-pointer" />
             </a>
           </div>
         </div>
