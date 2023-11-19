@@ -18,20 +18,6 @@ const Announcement = () => {
   }, []);
   console.log(articles);
 
-  const announcements = [
-    {
-      title: t("Card1_Heading"),
-      date: t("Card1_Date"),
-      image: "/Assets/Announcement/1.png",
-      detail: t("Card1_Detail"),
-    },
-    {
-      title: t("Card2_Heading"),
-      date: t("Card2_Date"),
-      image: "/Assets/Announcement/2.png",
-      detail: t("Card2_Detail"),
-    },
-  ];
   return (
     <ComponentWrapper style="lg:pb-20 lg:pt-0 py-12 z-10">
       <div className="w-full flex flex-col lg:items-start items-center justify-start gap-12">
@@ -47,7 +33,7 @@ const Announcement = () => {
               key={index}
               title={item.title}
               image={item.thumbnail}
-              detail={item.detail}
+              detail={item.description}
               date={item.pubDate}
               link={item.link}
             />

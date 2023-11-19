@@ -19,7 +19,7 @@ const FilledBtn: React.FC<Props> = ({
     <a
       href={link}
       target="_blank"
-      className={`bg-brand-main hover:bg-brand-main/80 hover:duration-200 ${padding}  text-white-main text-center font-semibold text-base rounded-[60px]`}
+      className={`bg-brand-main hover:bg-brand-secondary hover:duration-200 ${padding}  text-white-main text-center font-semibold text-base rounded-[60px]`}
     >
       {text}
     </a>
@@ -27,7 +27,7 @@ const FilledBtn: React.FC<Props> = ({
     <button
       type={type}
       onClick={onClick}
-      className={`bg-brand-main hover:bg-brand-main/80 hover:duration-200 ${padding}  text-white-main text-center font-semibold text-base rounded-[60px]`}
+      className={`bg-brand-main hover:bg-brand-secondary hover:duration-200 ${padding}  text-white-main text-center font-semibold text-base rounded-[60px]`}
     >
       {text}
     </button>

@@ -44,11 +44,13 @@ const KeyInovation = () => {
             />
           ))}
         </div>
-        <img
-          src="/Assets/KeyInovation/Table.png"
-          className="w-full h-[250px] md:h-[370px] lg:h-[550px] xl:h-[650px] z-10 object-contain  pointer-events-none"
-          alt=""
-        />
+        <div className="w-full h-[250px] md:h-[370px] lg:h-[550px] xl:h-[650px] z-10 bg-black-secondary rounded-2xl">
+          <img
+            src="/Assets/KeyInovation/Table.png"
+            className="w-full h-full z-10 object-contain  pointer-events-none"
+            alt=""
+          />
+        </div>
       </div>
     </ComponentWrapper>
   );

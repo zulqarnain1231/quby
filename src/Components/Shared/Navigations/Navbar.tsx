@@ -190,7 +190,7 @@ const Navbar = () => {
       <ComponentWrapper style="bg-trasparent h-[80px]">
         <nav className="w-full h-full flex items-center justify-between relative">
           <div className="h-full flex items-center justify-start gap-8">
-            <a href="/">
+            <a href="#">
               {" "}
               <img
                 src="/Assets/Logo.png"

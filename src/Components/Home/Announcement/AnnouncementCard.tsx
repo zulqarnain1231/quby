@@ -2,7 +2,7 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import OutlinedBtn from "../../Shared/Buttons/OutlinedBtn";
-
+import { useTranslation } from "react-i18next";
 type Props = {
   title: string;
   image: string;
@@ -18,20 +18,23 @@ const AnnouncementCard: React.FC<Props> = ({
   image,
   date,
 }) => {
-  // Your string containing HTML
-  const htmlString: string = `${detail}`;
+  const { t } = useTranslation();
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = detail;
 
-  // Create a temporary div to parse the HTML string
-  const tempDiv: HTMLDivElement = document.createElement("div");
-  tempDiv.innerHTML = htmlString;
+  const pTags = tempDiv.querySelectorAll("p");
+  const concatenatedText =
+    (pTags[0]?.textContent?.trim() || "") +
+    " " +
+    (pTags[1]?.textContent?.trim() || "");
 
-  // Find the first <p> tag
-  const firstPTag: HTMLParagraphElement | null = tempDiv.querySelector("p");
+  const concatenateAndTrimTo150Words = (text: string): string => {
+    const words = text.split(/\s+/);
+    const trimmedWords = words.slice(0, 50);
+    return trimmedWords.join(" ");
+  };
+  const trimmedText = concatenateAndTrimTo150Words(concatenatedText);
 
-  // Get the text content of the first <p> tag and trim it to 50 characters
-  const trimmedText: string = firstPTag
-    ? firstPTag.textContent?.trim().substring(0, 150) || ""
-    : "";
   return (
     <div className="w-full flex flex-col items-start justify-start gap-4 bg-black-secondary rounded-2xl p-4 z-10">
       <img
@@ -45,12 +48,16 @@ const AnnouncementCard: React.FC<Props> = ({
       <p className="text-xl sm:text-2xl font-semibold text-white-main">
         {title}
       </p>
-      <p className="text-white-main text-lg sm:text-xl font-normal">{detail}</p>
+      <p className="text-white-main text-lg sm:text-xl font-normal">
+        {trimmedText}...
+      </p>
       <OutlinedBtn
-        text="Read more"
+        text={t("Read_More")}
         link={link}
         padding="py-4 px-9 w-full"
-        icon={<AiOutlineArrowRight className="text-white-main text-2xl" />}
+        icon={
+          <AiOutlineArrowRight className="text-white-main group-hover:text-black-main text-2xl" />
+        }
       />
     </div>
   );

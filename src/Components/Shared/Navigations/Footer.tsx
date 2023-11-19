@@ -8,15 +8,33 @@ const Footer = () => {
   const menu = [
     {
       title: t("Platform"),
-      links: [t("QuBy_Ai_Token"), t("QuByChain"), t("QuBy_Dapp")],
+      links: [
+        { name: t("QuBy_Ai_Token"), link: "https://www.qubyai.com/ " },
+        { name: t("QuByChain"), link: "https://www.qubyaigame.com/" },
+        { name: t("QuBy_Dapp"), link: "" },
+      ],
     },
     {
       title: t("Company"),
-      links: [t("Contact"), t("Blog"), t("Marketing")],
+      links: [
+        { name: t("Contact"), link: "/" },
+        { name: t("Blog"), link: "https://quby-ai.gitbook.io/quby-ai/" },
+        { name: t("Marketing"), link: "https://quby-ai.gitbook.io/quby-ai/" },
+      ],
     },
     {
       title: t("Resources"),
-      links: [t("Whitepaper"), t("Security_Audit"), t("Whitelist")],
+      links: [
+        { name: t("Whitepaper"), link: "https://quby-ai.gitbook.io/quby-ai/" },
+        {
+          name: t("Security_Audit"),
+          link: "https://quby-ai.gitbook.io/quby-ai/",
+        },
+        {
+          name: t("Whitelist"),
+          link: "https://docs.google.com/forms/d/e/1FAIpQLSd6NEUVBIf8wN4uQQADNfavZ3Q9_73BuLpceiqSA4hP1o6kHA/viewform ",
+        },
+      ],
     },
   ];
   const socailIcons = [
@@ -59,7 +77,7 @@ const Footer = () => {
         <div className="w-full flex lg:flex-row flex-col items-start justify-start gap-8 lg:gap-0 lg:justify-between py-8 border-t border-b border-t-white-main border-b-white-main">
           {/* left side */}
           <div className="flex flex-col items-start justify-start gap-5">
-            <a href="/">
+            <a href="#">
               <img
                 src="/Assets/Logo.png"
                 className="w-[172px] h-[52px] object-contain"
@@ -101,10 +119,24 @@ const Footer = () => {
                 {item.links.map((el: any, index: number) => (
                   <a
                     key={index}
-                    href="/"
-                    className="text-white-main text-sm sm:text-base font-normal"
+                    href={el.link}
+                    onClick={
+                      el.name == t("QuBy_Dapp")
+                        ? (e: any) => {
+                            e.preventDefault();
+                          }
+                        : () => {}
+                    }
+                    className={`text-white-main text-sm sm:text-base font-normal ${
+                      el.name == t("QuBy_Dapp") && "group relative"
+                    }`}
                   >
-                    {el}
+                    {el.name}
+                    {el.name == t("QuBy_Dapp") && (
+                      <span className="absolute -top-12 z-10 -left-2 p-3 w-[150px] text-black-main text-sm font-normal bg-white-main rounded-lg hidden group-hover:inline-block">
+                        {t("Coming_Soon")}
+                      </span>
+                    )}
                   </a>
                 ))}
               </div>
