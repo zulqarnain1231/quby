@@ -9,6 +9,7 @@ import { FiChevronDown } from "react-icons/fi";
 import { BiMenuAltRight } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
 import FilledBtn from "../Buttons/FilledBtn";
+import { Link } from "react-router-dom";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
@@ -214,10 +215,12 @@ const Navbar = () => {
             <a href="https://twitter.com/QuByAigames" target="_blank">
               <FaXTwitter className="text-white-main text-2xl cursor-pointer hover:scale-110 hover:duration-300 xl:inline-block hidden" />
             </a>
-            <FilledBtn
-              text={t("Staking")}
-              padding="px-9 py-4 lg:inline-block hidden"
-            />
+            <Link to={"/stacking"}>
+              <FilledBtn
+                text={t("Staking")}
+                padding="px-9 py-4 lg:inline-block hidden"
+              />
+            </Link>
             {/* language translation */}
             <div
               onClick={() => setIsDropDown(true)}
@@ -301,11 +304,14 @@ const Navbar = () => {
           >
             {t("Documents")}
           </a>
-          <FilledBtn
-            onClick={toggleDrawer}
-            text={t("Staking")}
-            padding="px-9 py-4"
-          />
+          <Link to={"/stacking"}>
+            <FilledBtn
+              onClick={toggleDrawer}
+              text={t("Staking")}
+              padding="px-9 py-4"
+            />
+          </Link>
+
           <div className="w-full flex items-center justify-center gap-8">
             <a href="https://medium.com/@qubyai.meme" target="_blank">
               {" "}
