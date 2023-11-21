@@ -129,32 +129,24 @@ const Navbar = () => {
     const foundLanguage = languages.find(
       (language) => language.country === countryCode
     );
-
     return foundLanguage || false;
   };
   // getting user ip and location
   useEffect(() => {
-    // const corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
     const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=at_eqnOOOsoZBAMlGcuxsuuvxVlvPZPK`;
     fetch(apiUrl)
-      .then((response) => {
-        // Check if the request was successful (status code 200)
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        // Parse the JSON response
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
         setUserInformation({ location: data?.location?.country, ip: data.ip });
-        console.log(data);
-        console.log(userInformation);
+        // console.log(data);
+        // console.log(userInformation);
       })
       .catch((error) => {
-        // Handle errors
         console.error("Error fetching data:", error);
       });
+  }, []);
 
+  useEffect(() => {
     const selectedLanguage = findLanguageByCountry(userInformation.location);
 
     if (selectedLanguage) {
@@ -170,7 +162,7 @@ const Navbar = () => {
       });
       i18n.changeLanguage("ENG");
     }
-  }, []);
+  }, [userInformation]);
   // console.log(location);
   return (
     <>
