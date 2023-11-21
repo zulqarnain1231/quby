@@ -16,7 +16,6 @@ const Announcement = () => {
       .then((result) => setArticles(result.items.slice(0, 2)))
       .catch((error) => console.log("error", error));
   }, []);
-  console.log(articles);
 
   return (
     <ComponentWrapper style="lg:pb-20 lg:pt-0 py-12 z-10">

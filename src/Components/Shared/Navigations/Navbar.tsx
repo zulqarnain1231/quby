@@ -25,75 +25,75 @@ const Navbar = () => {
       name: "Dutch",
       logo: "/Assets/Flags/Dutch.svg",
       value: "DTC",
-      country: "NLD",
+      country: "NL",
     },
 
     {
       name: "Chinese",
       logo: "/Assets/Flags/China.svg",
       value: "CHI",
-      country: "CHN",
+      country: "CN",
     },
     {
       name: "Korean",
       logo: "/Assets/Flags/Korea.svg",
       value: "KOR",
-      country: "KOR",
+      country: "KR",
     },
 
     {
       name: "Russian",
       logo: "/Assets/Flags/Russia.svg",
       value: "RUS",
-      country: "RUS",
+      country: "RU",
     },
     {
       name: "French",
       logo: "/Assets/Flags/France.svg",
       value: "FNH",
-      country: "FRA",
+      country: "FR",
     },
     {
       name: "Japanese",
       logo: "/Assets/Flags/Japan.svg",
       value: "JPN",
-      country: "JPN",
+      country: "JP",
     },
     {
       name: "Portugese",
       logo: "/Assets/Flags/Portougal.svg",
       value: "POG",
-      country: "PRT",
+      country: "PT",
     },
     {
       name: "Spanish",
       logo: "/Assets/Flags/Spain.svg",
       value: "SPN",
-      country: "ESP",
+      country: "ES",
     },
     {
       name: "German",
       logo: "/Assets/Flags/Germany.svg",
       value: "GER",
-      country: "DEU",
+      country: "DE",
     },
     {
       name: "Italian",
       logo: "/Assets/Flags/Italy.svg",
       value: "ITA",
-      country: "ITA",
+      country: "IT",
     },
     {
       name: "Vietnamese",
       logo: "/Assets/Flags/Vietnam.svg",
       value: "VIET",
-      country: "VNM",
+      country: "VN",
     },
     {
       name: "Indonesian",
       logo: "/Assets/Flags/Indonesia.svg",
       value: "IDN",
-      country: "IDN",
+      country: "ID",
     },
   ];
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -146,30 +146,15 @@ const Navbar = () => {
         return response.json();
       })
       .then((data) => {
-        setUserInformation({ location: "", ip: data.ip });
+        setUserInformation({ location: data?.location?.country, ip: data.ip });
+        console.log(data);
+        console.log(userInformation);
       })
       .catch((error) => {
         // Handle errors
         console.error("Error fetching data:", error);
       });
 
-    const locationAPiUrl = `https://ipapi.co/${userInformation.ip}/json/`;
-
-    fetch(locationAPiUrl)
-      .then((response) => {
-        response.json().then((jsonData) => {
-          // console.log(jsonData);
-          location = jsonData.country_code;
-          setUserInformation({
-            ip: jsonData.ip,
-            location: "",
-          });
-          // console.log(userInformation);
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
     const selectedLanguage = findLanguageByCountry(userInformation.location);
 
     if (selectedLanguage) {
@@ -177,11 +162,13 @@ const Navbar = () => {
         logo: selectedLanguage.logo,
         name: selectedLanguage.name,
       });
+      i18n.changeLanguage(selectedLanguage.country);
     } else {
       setActiveLanguage({
         name: "ENG",
         logo: "/Assets/Flag.png",
       });
+      i18n.changeLanguage("ENG");
     }
   }, []);
   // console.log(location);

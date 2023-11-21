@@ -21,40 +21,40 @@ const resources = {
   ENG: {
     translation: translationEN,
   },
-  FRA: {
+  FR: {
     translation: translationFR,
   },
-  CHN: {
+  CN: {
     translation: translationCH,
   },
-  KOR: {
+  KR: {
     translation: translationKR,
   },
-  NLD: {
+  NL: {
     translation: translationNL,
   },
-  RUS: {
+  RU: {
     translation: translationRU,
   },
-  JPN: {
+  JP: {
     translation: translationJP,
   },
-  PRT: {
+  PT: {
     translation: translationPR,
   },
-  ESP: {
+  ES: {
     translation: translationES,
   },
-  DEU: {
+  DE: {
     translation: translationDE,
   },
-  ITA: {
+  IT: {
     translation: translationIT,
   },
-  VNM: {
+  VN: {
     translation: translationVN,
   },
-  IDN: {
+  ID: {
     translation: translationID,
   },
 };
