@@ -1,32 +1,32 @@
-import { t } from "i18next";
 import React from "react";
 import ComponentWrapper from "../../Shared/Wrappers/ComponentWrapper";
 import SectionHeading from "../../Shared/Typography/SectionHeading";
 import * as Icons from "../../../constants/Svgs/Icons";
 import ItemCard from "./ItemCard";
+import { useTranslation } from "react-i18next";
+
 const QubyAiSpace = () => {
+  const { t } = useTranslation();
   const articles = [
     {
-      title: "QuBy Ai Game",
+      title: t("Card1_Title"),
       image: "/Assets/AiSpace/AiGame.png",
-      detail:
-        "Embark on an epic adventure with Quby AI Game! Become a hero, solve mind-twisting puzzles, and conquer enchanted lands. Outsmart the AI to claim glory as the ultimate puzzle champion. Ready for the challenge? Join the journey where every puzzle is an adventure!",
-      button: "Play Now",
+      detail: t("Card1_detail"),
+      button: t("Play_Now"),
       link: "https://www.qubyaigame.com/",
     },
     {
-      title: "QuBy Ai Token",
-      image: "/Assets/AiSpace/AiGame.png",
-      detail:
-        "Explore the world of Quby AI Token on Ethereum—buy, stake, and reap rewards effortlessly. Acquire tokens, stake for growth, and turn gameplay into rewarding experiences. Begin your adventure today with Quby AI Token, where gaming meets earning!",
-      button: "Buy Tokens",
+      title: t("Card2_Title"),
+      image: "/Assets/AiSpace/AiToken.png",
+      detail: t("Card1_detail"),
+      button: t("Buy_Tokens"),
       link: "https://www.qubyai.com/",
     },
   ];
   return (
-    <ComponentWrapper style="lg:pb-20 lg:pt-20 py-12 z-10">
+    <ComponentWrapper style="lg:pb-20 lg:pt-56 py-12 z-10 lg:mt-72">
       <div className="w-full flex flex-col lg:items-start items-center justify-start gap-12">
-        <SectionHeading text="QuBy Ai Space" />
+        <SectionHeading text={t("QuBY_Ai_Space")} />
         <div className="w-full grid lg:grid-cols-2 lg:gap-4 gap-10 relative">
           <Icons.Gradient
             fill="none"

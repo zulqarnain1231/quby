@@ -1,60 +1,63 @@
 import React from "react";
 import FilledBtn from "../../Shared/Buttons/FilledBtn";
-
+import { useTranslation } from "react-i18next";
 const Steps = () => {
+  const { t } = useTranslation();
   const steps = [
     {
-      title: "Connected with MetaMask",
-      detail: `If not connected, click the F"Connect Wallet" button in the top right corner`,
+      title: t("Checkpoint1_Title"),
+      detail: t("Checkpoint1_Detail"),
     },
     {
-      title: "QuBy Ai available to deposit",
-      detail: `Current Balance : 0.00000`,
+      title: t("Checkpoint2_Title"),
+      detail: t("Checkpoint2_Detail"),
     },
     {
-      title: "ETH available in wallet",
-      detail: `ETH pays fees on  Ethereum.ETH Balance : 0.00000`,
+      title: t("Checkpoint3_Title"),
+      detail: t("Checkpoint3_Detail"),
     },
     {
-      title: "Eligible to stake",
-      detail: `You cannot stake if you have an active QUBYAI unstake/withdrawal request`,
+      title: t("Checkpoint4_Title"),
+      detail: t("Checkpoint4_Detail"),
     },
   ];
   return (
     <div className="w-full flex flex-col items-start justify-start gap-10">
       <h1 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-left text-center">
-        Stake your QUBYAI
+        {t("Stake_your_QUBYAI")}
       </h1>
-      <div className="w-full flex items-center justify-between gap-4 border border-white-main px-8 py-[18px] rounded-lg">
+      <div className="w-full max-w-full flex min-[600px]:flex-row flex-col min-[600px]:items-center items-start min-[600px]:justify-between lg:gap-4 gap-2 border border-white-main sm:px-8 px-6 py-4 sm:py-[18px] rounded-lg overflow-auto">
+        {/* <div className="w-full flex items-center justify-between md:gap-4 gap-2 min-w-[800px]"> */}
         <p className="text-sm sm:text-base font-medium text-brand-main">
-          Checkpoints
+          {t("Checkpoints")}
         </p>
-        <span className="h-[1px] w-[26px] bg-white-main"></span>
+        <span className="min-[750px]:inline-block hidden h-[1px] w-[26px] bg-brand-main"></span>
         <p className="text-sm sm:text-base font-medium text-white-main">
-          Amount to Stake
+          {t("Amount_to_Stake")}
         </p>
-        <span className="h-[1px] w-[26px] bg-white-main"></span>
+        <span className="min-[750px]:inline-block hidden h-[1px] w-[26px] bg-white-main"></span>
         <p className="text-sm sm:text-base font-medium text-white-main">
-          Pre-authorization
+          {t("Pre-authorization")}
         </p>
-        <span className="h-[1px] w-[26px] bg-white-main"></span>
+        <span className="min-[750px]:inline-block hidden h-[1px] w-[26px] bg-white-main"></span>
         <p className="text-sm sm:text-base font-medium text-white-main">
-          Confirm
+          {t("Confirm")}
         </p>
-        <span className="h-[1px] w-[26px] bg-white-main"></span>
+        <span className="min-[750px]:inline-block hidden h-[1px] w-[26px] bg-white-main"></span>
         <p className="text-sm sm:text-base font-medium text-white-main">
-          Confirmation
+          {t("Confirmation")}
         </p>
+        {/* </div> */}
       </div>
       <div className="w-full flex flex-col items-start justify-start gap-2">
         <p className="text-white-main font-bold text-xl sm:text-2xl">
-          Checkpoint
+          {t("Checkpoint")}
         </p>
         <p className="text-white-main font-medium text-lg sm:text-xl">
-          The following conditions must be met to proceed:
+          {t("Checkpoint_Detail")}
         </p>
       </div>
-      <div className="w-full grid grid-cols-4 gap-3">
+      <div className="w-full grid sm:grid-cols-2 min-[860px]:grid-cols-4 gap-3">
         {steps.map((item: any, index: number) => (
           <div
             key={index}
@@ -80,11 +83,11 @@ const Steps = () => {
           id=""
         />
         <p className="text-white-main text-sm sm:text-base font-normal">
-          I have read the{" "}
-          <span className="text-brand-main">Terms and Conditions</span>
+          {t("Have_Read")}
+          <span className="text-brand-main">{t("Terms_and_Conditions")}</span>
         </p>
       </div>
-      <FilledBtn text="Confirm" />
+      <FilledBtn text={t("Confirm")} />
     </div>
   );
 };

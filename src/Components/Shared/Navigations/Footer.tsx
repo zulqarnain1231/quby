@@ -10,7 +10,7 @@ const Footer = () => {
       title: t("Platform"),
       links: [
         { name: t("QuBy_Ai_Token"), link: "https://www.qubyai.com/ " },
-        { name: t("QuByChain"), link: "https://www.qubyaigame.com/" },
+        { name: t("QuBy_Game"), link: "https://www.qubyaigame.com/" },
         { name: t("QuBy_Dapp"), link: "" },
       ],
     },
@@ -128,8 +128,8 @@ const Footer = () => {
                         : () => {}
                     }
                     className={`text-white-main text-sm sm:text-base font-normal ${
-                      el.name == t("QuBy_Dapp") && "group relative"
-                    }`}
+                      el.name == t("QuBy_Dapp") && "group "
+                    } relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200`}
                   >
                     {el.name}
                     {el.name == t("QuBy_Dapp") && (
@@ -163,13 +163,13 @@ const Footer = () => {
           <div className="flex items-center justify-start gap-8">
             <a
               href="/"
-              className="text-white-main text-sm sm:text-base font-normal"
+              className="text-white-main text-sm sm:text-base font-normal relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
             >
               {t("Privacy_Policy")}
             </a>
             <a
               href="/"
-              className="text-white-main text-sm sm:text-base font-normal"
+              className="text-white-main text-sm sm:text-base font-normal relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
             >
               {t("Cookies")}
             </a>
