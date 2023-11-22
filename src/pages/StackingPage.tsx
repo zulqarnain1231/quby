@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../Components/Stacking/Hero/Hero";
 import Navbar from "../Components/Shared/Navigations/Navbar";
+import QubyAiSpace from "../Components/Stacking/QubyAiSpace/QubyAiSpace";
 
 const StackingPage = () => {
   return (
@@ -9,6 +10,7 @@ const StackingPage = () => {
         <Navbar />
         <Hero />
       </div>
+      <QubyAiSpace />
     </div>
   );
 };

@@ -3,11 +3,13 @@ import React from "react";
 import FilledBtn from "../../Shared/Buttons/FilledBtn";
 import OutlineBtn from "./OutlineBtn";
 import ComponentWrapper from "../../Shared/Wrappers/ComponentWrapper";
+import RewardTable from "./RewardTable";
+import Steps from "./Steps";
 
 const Hero = () => {
   return (
-    <ComponentWrapper style="lg:h-[100dvh] lg:py-0 py-16">
-      <div className="w-full h-full flex flex-col-reverse items-center justify-start lg:grid lg:grid-cols-[3fr,1fr] lg:gap-6 gap-8">
+    <ComponentWrapper style="lg:py-0 py-16">
+      <div className="w-full h-full flex flex-col-reverse items-center justify-start lg:grid lg:grid-cols-[3fr,1fr] lg:gap-6 gap-8 mt-20">
         <aside className="w-full h-full flex flex-col items-start justify-center gap-10">
           <h1 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-left text-center">
             QuBy Ai Stacking
@@ -45,60 +47,10 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <h1 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-left text-center">
-            Stake your QUBYAI
-          </h1>
-          <div className="w-full flex items-center justify-between gap-4 border border-white-main px-8 py-[18px] rounded-lg">
-            <p className="text-sm sm:text-base font-medium text-brand-main">
-              Checkpoints
-            </p>
-            <span className="h-[1px] w-[26px] bg-white-main"></span>
-            <p className="text-sm sm:text-base font-medium text-white-main">
-              Amount to Stake
-            </p>
-            <span className="h-[1px] w-[26px] bg-white-main"></span>
-            <p className="text-sm sm:text-base font-medium text-white-main">
-              Pre-authorization
-            </p>
-            <span className="h-[1px] w-[26px] bg-white-main"></span>
-            <p className="text-sm sm:text-base font-medium text-white-main">
-              Confirm
-            </p>
-            <span className="h-[1px] w-[26px] bg-white-main"></span>
-            <p className="text-sm sm:text-base font-medium text-white-main">
-              Confirmation
-            </p>
-          </div>
+          <Steps />
         </aside>
-        <aside className="w-full h-full flex items-end justify-center">
-          <div className="w-full h-[90%] flex flex-col items-center justify-start gap-4 bg-black-main rounded-xl p-7">
-            <div className="w-full flex flex-col items-center justify-center gap-4 border border-white-main rounded-[10px] p-6">
-              <p className="text-white-main text-[26px] sm:text-[32px] font-bold">
-                Staked
-              </p>
-              <p className="text-white-main text-lg sm:text-xl font-medium">
-                0.0000
-              </p>
-            </div>
-            <div className="w-full flex flex-col items-center justify-center gap-4 border border-white-main rounded-[10px] p-6">
-              <p className="text-white-main text-[26px] sm:text-[32px] font-bold">
-                Unstaked
-              </p>
-              <p className="text-white-main text-lg sm:text-xl font-medium">
-                0.0000
-              </p>
-            </div>
-            <div className="w-full flex flex-col items-center justify-center gap-4 border border-white-main rounded-[10px] p-6">
-              <p className="text-white-main text-[26px] sm:text-[32px] font-bold">
-                Rewards
-              </p>
-              <p className="text-white-main text-lg sm:text-xl font-medium">
-                0.0000
-              </p>
-            </div>
-            <FilledBtn text="Stack Reward" padding="py-4 w-full" />
-            <FilledBtn text="Widraw Reward" padding="py-4 w-full" />
-          </div>
+        <aside className="w-full h-full flex items-start justify-center">
+          <RewardTable />
         </aside>
       </div>
     </ComponentWrapper>

@@ -49,7 +49,7 @@ export const Gradient: React.FC<Props> = ({
           filterUnits="userSpaceOnUse"
           color-interpolation-filters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -81,12 +81,8 @@ export const Gradient: React.FC<Props> = ({
           gradientTransform="translate(630.565 589.473) rotate(42.4656) scale(487.696 393.03)"
         >
           <stop stop-color="#FF6666" />
-          <stop
-            offset="0.695057"
-            stop-color="#FF00B8"
-            stop-opacity="0.239583"
-          />
-          <stop offset="1" stop-color="#0052CD" stop-opacity="0" />
+          <stop offset="0.695057" stop-color="#FF00B8" stopOpacity="0.239583" />
+          <stop offset="1" stop-color="#0052CD" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint2_radial_1_6411"
@@ -97,7 +93,7 @@ export const Gradient: React.FC<Props> = ({
           gradientTransform="translate(740.074 1078.85) rotate(-86.5233) scale(412.077 388.595)"
         >
           <stop stop-color="#620CE1" />
-          <stop offset="1" stop-color="#620CE1" stop-opacity="0" />
+          <stop offset="1" stop-color="#620CE1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint3_radial_1_6411"
@@ -108,12 +104,8 @@ export const Gradient: React.FC<Props> = ({
           gradientTransform="translate(563.809 213.123) rotate(66.8587) scale(542.218 588.662)"
         >
           <stop stop-color="#FF00E5" />
-          <stop
-            offset="0.228083"
-            stop-color="#FF00E5"
-            stop-opacity="0.771917"
-          />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop offset="0.228083" stop-color="#FF00E5" stopOpacity="0.771917" />
+          <stop offset="1" stop-color="white" stopOpacity="0" />
         </radialGradient>
       </defs>
     </svg>
