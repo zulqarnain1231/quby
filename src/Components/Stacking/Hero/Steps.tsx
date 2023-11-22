@@ -105,7 +105,7 @@ const Steps = () => {
       >
         <div className="w-full h-full flex items-center justify-center">
           <h2 className="text-white-main sm:text-3xl text-xl text-center font-bold">
-            Coming soon
+            {t("Coming_Soon")}
           </h2>
         </div>
       </DialogueWrapper>

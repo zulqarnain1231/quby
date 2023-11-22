@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import ComponentWrapper from "../Wrappers/ComponentWrapper";
 import { useTranslation } from "react-i18next";
+import PrivacyModal from "./PrivacyModal";
+import CookiesModal from "./CookiesModal";
 
 const Footer = () => {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
+  const [isPrivacy, setIsPrivacy] = useState<boolean>(false);
+  const [isCookies, setIsCookies] = useState<boolean>(false);
+  const togglePrivacy = () => {
+    setIsPrivacy((prev) => !prev);
+  };
+  const toggleCookies = () => {
+    setIsCookies((prev) => !prev);
+  };
   const menu = [
     {
       title: t("Platform"),
@@ -161,21 +171,24 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex items-center justify-start gap-8">
-            <a
-              href="/"
+            <button
+              onClick={togglePrivacy}
               className="text-white-main text-sm sm:text-base font-normal relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
             >
               {t("Privacy_Policy")}
-            </a>
-            <a
-              href="/"
+            </button>
+            <button
+              onClick={toggleCookies}
               className="text-white-main text-sm sm:text-base font-normal relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
             >
               {t("Cookies")}
-            </a>
+            </button>
           </div>
         </div>
       </footer>
+
+      <PrivacyModal isOpen={isPrivacy} setIsOpen={togglePrivacy} />
+      <CookiesModal isOpen={isCookies} setIsOpen={toggleCookies} />
     </ComponentWrapper>
   );
 };
