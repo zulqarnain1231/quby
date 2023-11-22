@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import FilledBtn from "../../Shared/Buttons/FilledBtn";
 import { useTranslation } from "react-i18next";
+import { Checkbox } from "@mui/material";
+import DialogueWrapper from "../../Shared/Wrappers/DialogueWrapper";
+
 const Steps = () => {
   const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggleModal = () => {
+    setIsOpen((prevvalue) => !prevvalue);
+  };
   const steps = [
     {
       title: t("Checkpoint1_Title"),
@@ -75,19 +82,33 @@ const Steps = () => {
           </div>
         ))}
       </div>
-      <div className="w-full flex items-center justify-start gap-3">
-        <input
-          type="checkbox"
-          name=""
-          className="h-[20px] w-[20px] !bg-transparent cursor-pointer"
-          id=""
+      <div className="w-full flex items-center justify-start gap-1">
+        <Checkbox
+          sx={{
+            color: "#fff",
+            borderRadius: "12px",
+            "&.Mui-checked": {
+              color: "#A266D8",
+            },
+          }}
         />
         <p className="text-white-main text-sm sm:text-base font-normal">
           {t("Have_Read")}
           <span className="text-brand-main">{t("Terms_and_Conditions")}</span>
         </p>
       </div>
-      <FilledBtn text={t("Confirm")} />
+      <FilledBtn text={t("Confirm")} onClick={toggleModal} />
+      <DialogueWrapper
+        height="h-[100px]"
+        Open={isOpen}
+        CloseEvent={toggleModal}
+      >
+        <div className="w-full h-full flex items-center justify-center">
+          <h2 className="text-white-main sm:text-3xl text-xl text-center font-bold">
+            Coming soon
+          </h2>
+        </div>
+      </DialogueWrapper>
     </div>
   );
 };
