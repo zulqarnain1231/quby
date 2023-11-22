@@ -77,7 +77,7 @@ const Footer = () => {
         <div className="w-full flex lg:flex-row flex-col items-start justify-start gap-8 lg:gap-0 lg:justify-between py-8 border-t border-b border-t-white-main border-b-white-main">
           {/* left side */}
           <div className="flex flex-col items-start justify-start gap-5">
-            <a href="#">
+            <a href="/">
               <img
                 src="/Assets/Logo.png"
                 className="w-[172px] h-[52px] object-contain"
@@ -153,7 +153,7 @@ const Footer = () => {
                 <a key={index} href={item.link} target="_blank">
                   <img
                     src={item.icon}
-                    className="h-[24px] w-[24px] object-contain hover:scale-105 hover:duration-200"
+                    className="h-[24px] w-[24px] object-contain hover:scale-110 hover:duration-200"
                     alt=""
                   />
                 </a>

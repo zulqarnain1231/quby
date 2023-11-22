@@ -16,6 +16,7 @@ import translationDE from "../i18n/Translations/deu.json";
 import translationIT from "../i18n/Translations/ita.json";
 import translationVN from "../i18n/Translations/vnm.json";
 import translationID from "../i18n/Translations/idn.json";
+import translationTR from "../i18n/Translations/tur.json";
 
 const resources = {
   ENG: {
@@ -56,6 +57,9 @@ const resources = {
   },
   ID: {
     translation: translationID,
+  },
+  TR: {
+    translation: translationTR,
   },
 };
 

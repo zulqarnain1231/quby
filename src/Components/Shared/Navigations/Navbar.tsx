@@ -96,6 +96,12 @@ const Navbar = () => {
       value: "IDN",
       country: "ID",
     },
+    {
+      name: "Turkish",
+      logo: "/Assets/Flags/Turkey.png",
+      value: "TUR",
+      country: "TR",
+    },
   ];
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isDropDown, setIsDropDown] = useState<boolean>(false);
@@ -170,7 +176,7 @@ const Navbar = () => {
       <ComponentWrapper style="bg-trasparent h-[80px]">
         <nav className="w-full h-full flex items-center justify-between relative">
           <div className="h-full flex items-center justify-start gap-8">
-            <a href="#">
+            <a href="/">
               {" "}
               <img
                 src="/Assets/Logo.png"
@@ -240,7 +246,7 @@ const Navbar = () => {
               ref={dropDownRef}
               className={`${
                 isDropDown ? "flex" : "hidden"
-              } flex-col absolute -bottom-[585px] right-0 z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
+              } flex-col absolute -bottom-[625px] right-0 z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
             >
               {languages.map((item: any, index: number) => (
                 <button

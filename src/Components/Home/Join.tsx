@@ -29,7 +29,10 @@ const Join = () => {
             {t("Join_Detail")}
           </p>
           <div className="w-full flex items-center sm:flex-row flex-col lg:justify-start justify-center gap-8">
-            <OutlinedBtn text={t("QuBy_Ai_Token")} />
+            <OutlinedBtn
+              text={t("QuBy_Ai_Token")}
+              link="https://www.qubyai.com/"
+            />
             <OutlinedBtn text={t("QuBy_Ai_Staking")} />
           </div>
           <FilledBtn

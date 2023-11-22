@@ -61,13 +61,13 @@ const Steps = () => {
         {steps.map((item: any, index: number) => (
           <div
             key={index}
-            className="w-full flex flex-col items-start justify-center gap-4 px-4 pb-6 pt-4 rounded-[10px] bg-black-secondary"
+            className="w-full flex flex-col items-start justify-start gap-4 px-4 pb-6 pt-4 rounded-[10px] bg-black-secondary"
           >
             <div className="w-full flex items-start justify-between">
               <p className="text-white-main text-sm sm:text-base font-bold">
                 {item.title}
               </p>
-              <span className="h-[20px] w-[20px] rounded-full border border-brand-main"></span>
+              <span className="flex-shrink-0 h-[20px] w-[20px] rounded-full border border-brand-main"></span>
             </div>
             <p className="text-[#C0C0C0] text-xs font-normal leading-5">
               {item.detail}
