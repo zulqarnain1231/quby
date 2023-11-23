@@ -11,50 +11,42 @@ const PrivacyModal: React.FC<Props> = ({ isOpen, setIsOpen }: Props) => {
   const { t } = useTranslation();
   const terms = [
     {
-      title: "Introduction Privacy Policy",
+      title: t("Privacy_Title1"),
+      detail: [t("Privacy1_detail1")],
+    },
+    {
+      title: t("Privacy_Title2"),
       detail: [
-        "At QuByAiGame.com, QuByAi.com, QuByChain.com, we value your privacy.This privacy policy explains what information we collect from you and how we use it. We will never release your private information to third parties.",
+        t("Privacy2_detail1"),
+        t("Privacy2_detail2"),
+        t("Privacy2_detail3"),
+        t("Privacy2_detail4"),
       ],
     },
     {
-      title: "What Data We Collect",
+      title: t("Privacy_Title3"),
       detail: [
-        "We might collect some information to help us improve our services:",
-        "Your Name and Email: if you choose to provide them.",
-        "Technical Information: like your IP address and browser type.",
-        "Crypto Information: such as your wallet addresses.",
+        t("Privacy3_detail1"),
+        t("Privacy3_detail2"),
+        t("Privacy3_detail3"),
+        t("Privacy3_detail4"),
       ],
     },
     {
-      title: "How We Use Your Data",
-      detail: [
-        "We use this information to:",
-        "Make our website work for you.",
-        "Keep everything safe and secure.",
-        "Help us understand what you need so we can make our website better.",
-      ],
+      title: t("Privacy_Title4"),
+      detail: [t("Privacy4_detail1")],
     },
     {
-      title: "Keeping Your Data Safe",
-      detail: ["We take special care to keep your information safe:"],
+      title: t("Privacy_Title5"),
+      detail: [t("Privacy5_detail1")],
     },
     {
-      title: "Holding onto Your Data",
-      detail: [
-        "We only keep your information for as long as we need it. After that, we delete it.",
-      ],
+      title: t("Privacy_Title6"),
+      detail: [t("Privacy6_detail1")],
     },
     {
-      title: "No Third Parties",
-      detail: [
-        "We promise not to give your information to any third-party companies. Your privacy is important to us.",
-      ],
-    },
-    {
-      title: "Talk to Us",
-      detail: [
-        "If you have any questions or need help with anything, you can email us atContact@qubyai.com.",
-      ],
+      title: t("Privacy_Title7"),
+      detail: [t("Privacy7_detail1")],
     },
   ];
 
