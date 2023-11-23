@@ -9,12 +9,13 @@ import { FiChevronDown } from "react-icons/fi";
 import { BiMenuAltRight } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
 import FilledBtn from "../Buttons/FilledBtn";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
 const Navbar = () => {
   const { i18n, t } = useTranslation();
+  const Router = useLocation();
   const languages = [
     {
       name: "English",
@@ -187,21 +188,21 @@ const Navbar = () => {
             <a
               href="https://www.qubyaigame.com/"
               target="_blank"
-              className="text-white-main font-semibold text-base lg:inline-block hidden"
+              className="text-white-main font-semibold text-base lg:inline-block hidden relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
             >
               {t("QuBy_Game")}
             </a>
             <a
               href="https://www.qubyai.com/"
               target="_blank"
-              className="text-white-main font-semibold text-base lg:inline-block hidden"
+              className="text-white-main font-semibold text-base lg:inline-block hidden relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
             >
               {t("QuBy_Token")}
             </a>
             <a
               href="https://quby-ai.gitbook.io/quby-ai/"
               target="_blank"
-              className="text-white-main font-semibold text-base lg:inline-block hidden"
+              className="text-white-main font-semibold text-base lg:inline-block hidden relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
             >
               {t("Documents")}
             </a>
@@ -209,21 +210,27 @@ const Navbar = () => {
           <div className="h-full flex items-center justify-start gap-4">
             <a href="https://medium.com/@qubyai.meme" target="_blank">
               {" "}
-              <BsMedium className="text-white-main text-2xl cursor-pointer hover:scale-110 hover:duration-300 xl:inline-block hidden" />
+              <BsMedium className="text-white-main text-2xl cursor-pointer hover:scale-125 hover:duration-300 xl:inline-block hidden" />
             </a>
             <a
               href="https://www.linkedin.com/company/qubyaigame"
               target="_blank"
             >
               {" "}
-              <FaLinkedinIn className="text-white-main text-2xl cursor-pointer hover:scale-110 hover:duration-300 xl:inline-block hidden" />
+              <FaLinkedinIn className="text-white-main text-2xl cursor-pointer hover:scale-125 hover:duration-300 xl:inline-block hidden" />
             </a>{" "}
             <a href="https://twitter.com/QuByAigames" target="_blank">
-              <FaXTwitter className="text-white-main text-2xl cursor-pointer hover:scale-110 hover:duration-300 xl:inline-block hidden" />
+              <FaXTwitter className="text-white-main text-2xl cursor-pointer hover:scale-125 hover:duration-300 xl:inline-block hidden" />
             </a>
-            <Link to={"/stacking"}>
+            <Link
+              to={
+                Router.pathname == "/stacking"
+                  ? "https://www.qubyaigame.com/"
+                  : "/stacking"
+              }
+            >
               <FilledBtn
-                text={t("Staking")}
+                text={Router.pathname === "/" ? t("Staking") : t("Buy_Token")}
                 padding="px-9 py-4 lg:inline-block hidden"
               />
             </Link>
@@ -290,7 +297,7 @@ const Navbar = () => {
             onClick={toggleDrawer}
             href="https://www.qubyaigame.com/"
             target="_blank"
-            className="text-white-main font-semibold text-base"
+            className="text-white-main font-semibold text-base relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
           >
             {t("QuBy_Game")}
           </a>
@@ -298,7 +305,7 @@ const Navbar = () => {
             onClick={toggleDrawer}
             href="https://www.qubyai.com/"
             target="_blank"
-            className="text-white-main font-semibold text-base"
+            className="text-white-main font-semibold text-base relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
           >
             {t("QuBy_Token")}
           </a>
@@ -306,15 +313,21 @@ const Navbar = () => {
             onClick={toggleDrawer}
             href="https://quby-ai.gitbook.io/quby-ai/"
             target="_blank"
-            className="text-white-main font-semibold text-base"
+            className="text-white-main font-semibold text-base relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200"
           >
             {t("Documents")}
           </a>
-          <Link to={"/stacking"}>
+          <Link
+            onClick={toggleDrawer}
+            to={
+              Router.pathname == "/stacking"
+                ? "https://www.qubyaigame.com/"
+                : "/stacking"
+            }
+          >
             <FilledBtn
-              onClick={toggleDrawer}
-              text={t("Staking")}
-              padding="px-9 py-4"
+              text={Router.pathname === "/" ? t("Staking") : t("Buy_Token")}
+              padding="px-9 py-4 "
             />
           </Link>
 
