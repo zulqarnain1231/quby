@@ -102,9 +102,14 @@ const Footer = () => {
                 <p className="text-brand-main text-sm sm:text-base font-semibold">
                   {t("Email")}
                 </p>
-                <p className="text-white-main text-sm sm:text-base font-normal">
-                  Info@qubyai.com
-                </p>
+                <form action="mailto:Info@qubyai.com">
+                  <button
+                    type="submit"
+                    className="text-white-main text-sm sm:text-base font-normal"
+                  >
+                    Info@qubyai.com
+                  </button>
+                </form>
               </div>
               <div className="flex flex-col items-start justify-start gap-2">
                 <p className="text-brand-main text-sm sm:text-base font-semibold">
@@ -126,29 +131,40 @@ const Footer = () => {
                 <p className="text-brand-main text-sm sm:text-base font-semibold">
                   {item.title}
                 </p>
-                {item.links.map((el: any, index: number) => (
-                  <a
-                    key={index}
-                    href={el.link}
-                    onClick={
-                      el.name == t("QuBy_Dapp")
-                        ? (e: any) => {
-                            e.preventDefault();
-                          }
-                        : () => {}
-                    }
-                    className={`text-white-main text-sm sm:text-base font-normal ${
-                      el.name == t("QuBy_Dapp") && "group "
-                    } relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200`}
-                  >
-                    {el.name}
-                    {el.name == t("QuBy_Dapp") && (
-                      <span className="absolute -top-12 z-10 -left-2 p-3 w-[150px] text-black-main text-sm font-normal bg-white-main rounded-lg hidden group-hover:inline-block">
-                        {t("Coming_Soon")}
-                      </span>
-                    )}
-                  </a>
-                ))}
+                {item.links.map((el: any, index: number) =>
+                  el.name == t("Contact") ? (
+                    <form action="mailto:Info@qubyai.com" key={index}>
+                      <button
+                        type="submit"
+                        className={`text-white-main text-sm sm:text-base font-normal relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200`}
+                      >
+                        {el.name}
+                      </button>
+                    </form>
+                  ) : (
+                    <a
+                      key={index}
+                      href={el.link}
+                      onClick={
+                        el.name == t("QuBy_Dapp")
+                          ? (e: any) => {
+                              e.preventDefault();
+                            }
+                          : () => {}
+                      }
+                      className={`text-white-main text-sm sm:text-base font-normal ${
+                        el.name == t("QuBy_Dapp") && "group "
+                      } relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-brand-main hover:after:w-full hover:after:duration-200`}
+                    >
+                      {el.name}
+                      {el.name == t("QuBy_Dapp") && (
+                        <span className="absolute -top-12 z-10 -left-2 p-3 w-[150px] text-black-main text-sm font-normal bg-white-main rounded-lg hidden group-hover:inline-block">
+                          {t("Coming_Soon")}
+                        </span>
+                      )}
+                    </a>
+                  )
+                )}
               </div>
             ))}
           </div>

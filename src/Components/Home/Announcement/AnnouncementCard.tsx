@@ -36,7 +36,7 @@ const AnnouncementCard: React.FC<Props> = ({
   const trimmedText = concatenateAndTrimTo150Words(concatenatedText);
 
   return (
-    <div className="w-full flex flex-col items-start justify-start gap-4 bg-black-secondary rounded-2xl p-4 z-10">
+    <div className="w-full flex flex-col items-start justify-between gap-4 bg-black-secondary rounded-2xl p-4 z-10">
       <img
         src={image}
         className="object-cover w-full sm:h-[350px] h-[270px] rounded-2xl"
