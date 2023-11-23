@@ -24,9 +24,10 @@ const QubyAiSpace = () => {
     },
   ];
   return (
-    <ComponentWrapper style="lg:pb-20 lg:pt-60 py-12 z-10 lg:mt-80">
+    <ComponentWrapper style="lg:pb-20 xl:pt-60 lg:pt-72 lg:mt-96 py-12 z-10 xl:mt-80">
       <div className="w-full flex flex-col lg:items-start items-center justify-start gap-12">
         <SectionHeading text={t("QuBY_Ai_Space")} />
+
         <div className="w-full grid lg:grid-cols-2 lg:gap-4 gap-10 relative">
           <Icons.Gradient
             fill="none"

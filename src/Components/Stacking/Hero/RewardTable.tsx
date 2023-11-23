@@ -23,8 +23,8 @@ const RewardTable = () => {
         </p>
         <p className="text-white-main text-lg sm:text-xl font-medium">0.0000</p>
       </div>
-      <FilledBtn text={t("Stack_Reward")} padding="py-4 w-full" />
-      <FilledBtn text={t("Widraw_Reward")} padding="py-4 w-full" />
+      <FilledBtn text={t("Stack_Reward")} disabled padding="py-4 w-full" />
+      <FilledBtn text={t("Widraw_Reward")} disabled padding="py-4 w-full" />
     </div>
   );
 };

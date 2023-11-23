@@ -6,6 +6,7 @@ type Props = {
   type?: "button" | "submit";
   link?: string;
   onClick?: any;
+  disabled?: boolean;
 };
 
 const FilledBtn: React.FC<Props> = ({
@@ -14,6 +15,7 @@ const FilledBtn: React.FC<Props> = ({
   type = "button",
   link,
   onClick = () => {},
+  disabled = false,
 }) => {
   return link ? (
     <a
@@ -27,7 +29,8 @@ const FilledBtn: React.FC<Props> = ({
     <button
       type={type}
       onClick={onClick}
-      className={`bg-brand-main hover:bg-brand-secondary hover:duration-200 ${padding}  text-white-main text-center font-semibold text-base rounded-[60px]`}
+      disabled={disabled}
+      className={`bg-brand-main hover:bg-brand-secondary hover:duration-200 ${padding}  text-white-main text-center font-semibold text-base rounded-[60px] disabled:cursor-not-allowed disabled:bg-brand-main/60`}
     >
       {text}
     </button>
