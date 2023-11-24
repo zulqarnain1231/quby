@@ -24,7 +24,7 @@ const QubyAiSpace = () => {
     },
   ];
   return (
-    <ComponentWrapper style="lg:pb-20 xl:pt-60 lg:pt-72 lg:mt-96 py-12 z-10 xl:mt-80">
+    <ComponentWrapper style="lg:pb-20 py-12 z-10">
       <div className="w-full flex flex-col lg:items-start items-center justify-start gap-12">
         <SectionHeading text={t("QuBY_Ai_Space")} />
 
