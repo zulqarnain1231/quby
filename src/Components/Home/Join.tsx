@@ -23,7 +23,7 @@ const Join = () => {
             alt=""
           />
         </aside>
-        <aside className="w-full flex flex-col lg:items-start items-center justify-center gap-8">
+        <aside className="w-full flex flex-col lg:items-start items-center justify-center gap-8 z-20">
           <SectionHeading text={t("Join_Heading")} style="lg:w-[80%]" />
           <p className="text-white-main text-lg sm:text-xl font-normal lg:w-[90%] lg:text-left text-center">
             {t("Join_Detail")}
