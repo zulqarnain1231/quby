@@ -141,13 +141,12 @@ const Navbar = () => {
   };
   // getting user ip and location
   useEffect(() => {
-    const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=at_eqnOOOsoZBAMlGcuxsuuvxVlvPZPK`;
+    const apiUrl = `https://api.ipdata.co?api-key=670c0261b04ed2a6d3485b14d190c0b11e2db620f95d48a73a23e991`;
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
-        setUserInformation({ location: data?.location?.country, ip: data.ip });
+        setUserInformation({ location: data?.country_code, ip: data.ip });
         // console.log(data);
-        // console.log(userInformation);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -169,9 +168,10 @@ const Navbar = () => {
         logo: "/Assets/Flag.png",
       });
       i18n.changeLanguage("ENG");
+      // console.log(userInformation);
     }
   }, [userInformation]);
-  // console.log(location);
+
   return (
     <>
       <ComponentWrapper style="bg-trasparent h-[80px]">
