@@ -145,6 +145,7 @@ const Footer = () => {
                     <a
                       key={index}
                       href={el.link}
+                      target={el.name !== t("QuBy_Dapp") ? "_blank" : "_self"}
                       onClick={
                         el.name == t("QuBy_Dapp")
                           ? (e: any) => {
