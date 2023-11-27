@@ -79,12 +79,12 @@ const Navbar = () => {
       value: "GER",
       country: "DE",
     },
-    {
-      name: "Italian",
-      logo: "/Assets/Flags/Italy.svg",
-      value: "ITA",
-      country: "IT",
-    },
+    // {
+    //   name: "Italian",
+    //   logo: "/Assets/Flags/Italy.svg",
+    //   value: "ITA",
+    //   country: "IT",
+    // },
     {
       name: "Vietnamese",
       logo: "/Assets/Flags/Vietnam.svg",
@@ -253,7 +253,7 @@ const Navbar = () => {
               ref={dropDownRef}
               className={`${
                 isDropDown ? "flex" : "hidden"
-              } flex-col absolute -bottom-[625px] right-0 z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
+              } flex-col absolute -bottom-[585px] right-0 z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
             >
               {languages.map((item: any, index: number) => (
                 <button
