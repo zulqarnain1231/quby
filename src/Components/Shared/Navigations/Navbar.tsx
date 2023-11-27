@@ -174,8 +174,8 @@ const Navbar = () => {
 
   return (
     <>
-      <ComponentWrapper style="bg-trasparent h-[80px]">
-        <nav className="w-full h-full flex items-center justify-between relative">
+      <ComponentWrapper style="bg-trasparent h-[80px] z-50">
+        <nav className="w-full h-full flex items-center justify-between relative z-50">
           <div className="h-full flex items-center justify-start gap-8">
             <a href="/">
               {" "}
@@ -253,7 +253,7 @@ const Navbar = () => {
               ref={dropDownRef}
               className={`${
                 isDropDown ? "flex" : "hidden"
-              } flex-col absolute -bottom-[585px] right-0 z-20 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
+              } flex-col absolute -bottom-[585px] right-0 z-50 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
             >
               {languages.map((item: any, index: number) => (
                 <button
@@ -261,7 +261,7 @@ const Navbar = () => {
                   onClick={() =>
                     handleLanguageChange(item.value, item.logo, item.country)
                   }
-                  className="w-full flex items-center justify-start gap-2 hover:bg-black-main/20 py-2 px-4 dropdown-btn"
+                  className="w-full flex items-center justify-start z-50 gap-2 hover:bg-black-main/20 py-2 px-4 dropdown-btn"
                 >
                   <img
                     src={item.logo}

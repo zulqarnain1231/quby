@@ -37,11 +37,18 @@ const About = () => {
           </div>
         </aside>
         <aside className="w-full h-full flex items-center justify-center">
-          <img
-            src="/Assets/About/Bg.gif"
-            className="w-full h-full rounded-2xl object-cover"
-            alt=""
-          />
+          <div className=" h-full w-full">
+            <video
+              className="w-full h-full object-cover object-center rounded-2xl"
+              src="/Assets/About/Bg.webm"
+              autoPlay
+              muted
+              height={"100%"}
+              width={"100%"}
+              controls={false}
+              loop
+            ></video>
+          </div>
           <img
             src="/Assets/About/Logo.png"
             className="sm:w-[450px] w-[380px] sm:h-[380px] h-[240px] object-contain absolute top-auto left-auto"

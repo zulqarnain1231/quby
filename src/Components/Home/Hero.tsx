@@ -7,15 +7,15 @@ const Hero = () => {
   const { t } = useTranslation();
   return (
     <ComponentWrapper style="lg:h-[calc(100dvh-80px)] lg:py-0 py-16">
-      <div className="w-full h-full flex flex-col-reverse items-center justify-start lg:grid lg:grid-cols-2 lg:gap-0 gap-8">
+      <div className="w-full h-full flex flex-col-reverse items-center justify-start lg:grid lg:grid-cols-2 lg:gap-0 gap-8 z-10">
         <aside className="w-full h-full flex items-center justify-center">
-          <img
+          {/* <img
             src="/Assets/Hero/MainImg.png"
             className="sm:w-[440px] w-[380px] sm:h-[490px] h-[430px] object-contain"
             alt=""
-          />
+          /> */}
         </aside>
-        <aside className="w-full h-full flex flex-col lg:items-start items-center justify-center gap-7">
+        <aside className="w-full h-full flex flex-col lg:items-start items-center justify-center gap-7 z-20">
           <h1 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-left text-center">
             {t("Hero_Heading")}
           </h1>
