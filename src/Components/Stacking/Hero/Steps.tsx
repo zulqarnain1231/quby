@@ -3,12 +3,17 @@ import FilledBtn from "../../Shared/Buttons/FilledBtn";
 import { useTranslation } from "react-i18next";
 import { Checkbox } from "@mui/material";
 import DialogueWrapper from "../../Shared/Wrappers/DialogueWrapper";
+import TermsModal from "../Steps/TermsModal";
 
 const Steps = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isTerms, setIsTerms] = useState<boolean>(false);
   const toggleModal = () => {
     setIsOpen((prevvalue) => !prevvalue);
+  };
+  const toggleTermsModal = () => {
+    setIsTerms((prevvalue) => !prevvalue);
   };
   const steps = [
     {
@@ -94,7 +99,10 @@ const Steps = () => {
         />
         <p className="text-white-main text-sm sm:text-base font-normal">
           {t("Have_Read")}
-          <span className="text-brand-main">{t("Terms_and_Conditions")}</span>
+          <button onClick={toggleTermsModal} className="text-brand-main ml-1">
+            {" "}
+            {t("Terms_and_Conditions")}
+          </button>
         </p>
       </div>
       <FilledBtn text={t("Confirm")} onClick={toggleModal} />
@@ -109,6 +117,7 @@ const Steps = () => {
           </h2>
         </div>
       </DialogueWrapper>
+      <TermsModal isOpen={isTerms} setIsOpen={toggleTermsModal} />
     </div>
   );
 };
