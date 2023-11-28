@@ -6,7 +6,7 @@ import DialogueWrapper from "../../Shared/Wrappers/DialogueWrapper";
 import TermsModal from "../Steps/TermsModal";
 
 type Props = {
-  activeTab: string;
+  activeTab: { stake: boolean; unstack: boolean; withdraw: boolean };
 };
 const Steps: React.FC<Props> = ({ activeTab }: Props) => {
   const { t } = useTranslation();
@@ -59,7 +59,7 @@ const Steps: React.FC<Props> = ({ activeTab }: Props) => {
       <h1 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-left text-center">
         {t("Stake_your_QUBYAI")}
       </h1>
-      {activeTab == t("Stake") && (
+      {activeTab.stake && (
         <div className="w-full max-w-full flex min-[600px]:flex-row flex-col min-[600px]:items-center items-start min-[600px]:justify-between lg:gap-4 gap-2 border border-white-main sm:px-8 px-6 py-4 sm:py-[18px] rounded-lg overflow-auto">
           {/* <div className="w-full flex items-center justify-between md:gap-4 gap-2 min-w-[800px]"> */}
           <p className="text-sm sm:text-base font-medium text-brand-main">
@@ -84,7 +84,7 @@ const Steps: React.FC<Props> = ({ activeTab }: Props) => {
           {/* </div> */}
         </div>
       )}
-      {activeTab == t("Unstack") && (
+      {activeTab.unstack && (
         <div className="w-full max-w-full flex min-[600px]:flex-row flex-col min-[600px]:items-center items-start min-[600px]:justify-between lg:gap-4 gap-2 border border-white-main sm:px-8 px-6 py-4 sm:py-[18px] rounded-lg overflow-auto">
           {/* <div className="w-full flex items-center justify-between md:gap-4 gap-2 min-w-[800px]"> */}
           <p className="text-sm sm:text-base font-medium text-brand-main">
@@ -110,7 +110,7 @@ const Steps: React.FC<Props> = ({ activeTab }: Props) => {
           {/* </div> */}
         </div>
       )}
-      {activeTab == t("Withdraw") && (
+      {activeTab.withdraw && (
         <div className="w-full max-w-full flex min-[600px]:flex-row flex-col min-[600px]:items-center items-start min-[600px]:justify-between lg:gap-6 gap-2 border border-white-main sm:px-8 px-6 py-4 sm:py-[18px] rounded-lg overflow-auto">
           {/* <div className="w-full flex items-center justify-between md:gap-4 gap-2 min-w-[800px]"> */}
           <p className="text-sm sm:text-base font-medium text-brand-main whitespace-nowrap">
@@ -129,7 +129,7 @@ const Steps: React.FC<Props> = ({ activeTab }: Props) => {
           {/* </div> */}
         </div>
       )}
-      {(activeTab == t("Stake") || activeTab == t("Withdraw")) && (
+      {(activeTab.stake || activeTab.withdraw) && (
         <>
           {" "}
           <div className="w-full flex flex-col items-start justify-start gap-2">
@@ -141,7 +141,7 @@ const Steps: React.FC<Props> = ({ activeTab }: Props) => {
             </p>
           </div>
           <div className="w-full grid sm:grid-cols-2 min-[860px]:grid-cols-4 gap-3">
-            {activeTab == t("Stake") &&
+            {activeTab.stake &&
               steps.map((item: any, index: number) => (
                 <div
                   key={index}
@@ -158,7 +158,7 @@ const Steps: React.FC<Props> = ({ activeTab }: Props) => {
                   </p>
                 </div>
               ))}
-            {activeTab == t("Withdraw") &&
+            {activeTab.withdraw &&
               withdrawSteps.map((item: any, index: number) => (
                 <div
                   key={index}
@@ -199,7 +199,7 @@ const Steps: React.FC<Props> = ({ activeTab }: Props) => {
           </div>
         </>
       )}
-      {activeTab == t("Unstack") && (
+      {activeTab.unstack && (
         <div className="w-full flex flex-col items-center justify-center gap-4 py-10">
           <img
             src="/Assets/Warning.png"
@@ -212,7 +212,7 @@ const Steps: React.FC<Props> = ({ activeTab }: Props) => {
         </div>
       )}
 
-      {activeTab == t("Stake") ? (
+      {activeTab.stake ? (
         <FilledBtn text={t("Confirm")} onClick={toggleModal} />
       ) : (
         <div className="w-full flex items-center justify-start gap-4">

@@ -7,14 +7,20 @@ import { useTranslation } from "react-i18next";
 import { LuWallet } from "react-icons/lu";
 const Hero = () => {
   const { t } = useTranslation();
-  const [isActive, setIsActive] = useState<string>(t("Stake"));
-
+  const [isActive, setIsActive] = useState({
+    stake: true,
+    unstack: false,
+    withdraw: false,
+  });
   const handleIsActive = (tab: string) => {
-    setIsActive(tab);
+    setIsActive((prevState) => ({
+      ...prevState,
+      stake: tab === "stake",
+      unstack: tab === "unstack",
+      withdraw: tab === "withdraw",
+    }));
   };
-  useEffect(() => {
-    setIsActive(t("Stake"));
-  }, []);
+
   return (
     <ComponentWrapper style="lg:py-0 py-16">
       <div className="w-full h-full grid lg:grid-cols-[3fr,1fr] lg:gap-6 gap-8 lg:mt-20">
@@ -33,20 +39,20 @@ const Hero = () => {
 
           <div className="w-full flex sm:flex-row flex-col items-center justify-start gap-6 sm:gap-3 md:gap-8">
             <OutlineBtn
-              event={() => handleIsActive(t("Stake"))}
-              isActive={isActive === t("Stake")}
+              event={() => handleIsActive(t("stake"))}
+              isActive={isActive.stake}
               text={t("Stake")}
             />
             <span className="sm:w-[60px] sm:inline-block hidden h-[1px] bg-[#414141]"></span>
             <OutlineBtn
-              event={() => handleIsActive(t("Unstack"))}
-              isActive={isActive === t("Unstack")}
+              event={() => handleIsActive(t("unstack"))}
+              isActive={isActive.unstack}
               text={t("Unstack")}
             />
             <span className="sm:w-[60px] sm:inline-block hidden h-[1px] bg-[#414141]"></span>
             <OutlineBtn
-              event={() => handleIsActive(t("Withdraw"))}
-              isActive={isActive === t("Withdraw")}
+              event={() => handleIsActive(t("withdraw"))}
+              isActive={isActive.withdraw}
               text={t("Withdraw")}
             />
           </div>
