@@ -1,5 +1,4 @@
-import React from "react";
-import FilledBtn from "../../Shared/Buttons/FilledBtn";
+import React, { useState, useEffect } from "react";
 import OutlineBtn from "./OutlineBtn";
 import ComponentWrapper from "../../Shared/Wrappers/ComponentWrapper";
 import RewardTable from "./RewardTable";
@@ -8,6 +7,14 @@ import { useTranslation } from "react-i18next";
 import { LuWallet } from "react-icons/lu";
 const Hero = () => {
   const { t } = useTranslation();
+  const [isActive, setIsActive] = useState<string>(t("Stake"));
+
+  const handleIsActive = (tab: string) => {
+    setIsActive(tab);
+  };
+  useEffect(() => {
+    setIsActive(t("Stake"));
+  }, []);
   return (
     <ComponentWrapper style="lg:py-0 py-16">
       <div className="w-full h-full grid lg:grid-cols-[3fr,1fr] lg:gap-6 gap-8 lg:mt-20">
@@ -25,11 +32,23 @@ const Hero = () => {
           </div>
 
           <div className="w-full flex sm:flex-row flex-col items-center justify-start gap-6 sm:gap-3 md:gap-8">
-            <OutlineBtn text={t("Stake")} />
+            <OutlineBtn
+              event={() => handleIsActive(t("Stake"))}
+              isActive={isActive === t("Stake")}
+              text={t("Stake")}
+            />
             <span className="sm:w-[60px] sm:inline-block hidden h-[1px] bg-[#414141]"></span>
-            <OutlineBtn text={t("Unstack")} />
+            <OutlineBtn
+              event={() => handleIsActive(t("Unstack"))}
+              isActive={isActive === t("Unstack")}
+              text={t("Unstack")}
+            />
             <span className="sm:w-[60px] sm:inline-block hidden h-[1px] bg-[#414141]"></span>
-            <OutlineBtn text={t("Withdraw")} />
+            <OutlineBtn
+              event={() => handleIsActive(t("Withdraw"))}
+              isActive={isActive === t("Withdraw")}
+              text={t("Withdraw")}
+            />
           </div>
           <div className="w-full grid md:grid-cols-3 gap-5">
             <div className="w-full flex flex-col items-center justify-center gap-4 py-10 px-[58px] bg-black-secondary rounded-[10px]">
@@ -57,7 +76,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <Steps />
+          <Steps activeTab={isActive} />
         </aside>
         <aside className="w-full h-full flex items-start justify-center">
           <RewardTable />

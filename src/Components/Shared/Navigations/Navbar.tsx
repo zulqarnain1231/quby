@@ -222,18 +222,20 @@ const Navbar = () => {
             <a href="https://twitter.com/QuByAigames" target="_blank">
               <FaXTwitter className="text-white-main text-2xl cursor-pointer hover:scale-125 hover:duration-300 xl:inline-block hidden" />
             </a>
-            <Link
-              to={
-                Router.pathname == "/stacking"
-                  ? "https://www.qubyaigame.com/"
-                  : "/stacking"
-              }
-            >
+            {Router.pathname == "/stacking" ? (
               <FilledBtn
-                text={Router.pathname === "/" ? t("Staking") : t("Buy_Token")}
+                text={t("Buy_Token")}
+                link="https://www.qubyaigame.com/"
                 padding="px-9 py-4 lg:inline-block hidden"
               />
-            </Link>
+            ) : (
+              <Link to={"/stacking"}>
+                <FilledBtn
+                  text={t("Staking")}
+                  padding="px-9 py-4 lg:inline-block hidden"
+                />
+              </Link>
+            )}
             {/* language translation */}
             <div
               onClick={() => setIsDropDown(true)}

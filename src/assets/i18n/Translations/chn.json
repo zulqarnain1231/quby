@@ -123,5 +123,14 @@
   "Cookies_Title4": "管理cookies",
   "Cookies4_detail1": "您可以使用浏览器设置管理或删除cookies。禁用基本cookies可能会影响网站上某些与加密相关的功能的功能。如果您对我们使用cookies或本政策在加密环境中的具体情况有任何疑问或担忧，请通过Contact@QuByAi.com与我们联系。通过参与MemeKombatToken.com，您同意根据本cookies政策使用cookies。",
   "Connect_Wallet": "连接钱包",
-  "Terms_Conditions_Detail": "QuByChain 向用户提供质押服务，目的是委托（也称为“质押”或“质押”）用户的 QuByChain 代币，以换取净质押奖励的份额。您可以通过平台提供指令，例如委托和取消委托。一旦收到指令，系统将记录该指令，您将无法取消或编辑这些指令。您承认并同意，如果您无法满足身份验证要求或在参与 QuByChain 提供的服务时发现任何其他可疑活动，QuByChain 有权拒绝您参与 Stake。质押的代币仅限于 QUBYAI 代币。您承认并同意 QuByChain 上显示的预计奖励收益率是一个估计值，而不是保证或承诺的实际收益率。您收到的实际收益可能不符合或可能低于估计收益，并且可能会压缩或扩大收益。 QuByChain 不承诺或保证您将获得的实际收益或 Stake 奖励。您承认并同意，当您取消代币委托时，此类代币将在 7 天后交付到您的 BEP-20 兼容钱包中，并且时间可能会根据请求和执行的时间而有所不同。 QuByChain 可能会自行决定收取提款费或最低交易金额，并且会不时发生变化。 QuByChain 不对因代币实际交付的时间差异而造成的任何损失承担责任。您承认并同意 QuByChain 保留随时自行决定修改与任何特定 Stake 计划相关的任何条款的权利。由于您对Stake计划条款的误解以及该条款规则的变更而造成的任何损失，QuByChain不承担任何责任"
+  "Terms_Conditions_Detail": "QuByChain 向用户提供质押服务，目的是委托（也称为“质押”或“质押”）用户的 QuByChain 代币，以换取净质押奖励的份额。您可以通过平台提供指令，例如委托和取消委托。一旦收到指令，系统将记录该指令，您将无法取消或编辑这些指令。您承认并同意，如果您无法满足身份验证要求或在参与 QuByChain 提供的服务时发现任何其他可疑活动，QuByChain 有权拒绝您参与 Stake。质押的代币仅限于 QUBYAI 代币。您承认并同意 QuByChain 上显示的预计奖励收益率是一个估计值，而不是保证或承诺的实际收益率。您收到的实际收益可能不符合或可能低于估计收益，并且可能会压缩或扩大收益。 QuByChain 不承诺或保证您将获得的实际收益或 Stake 奖励。您承认并同意，当您取消代币委托时，此类代币将在 7 天后交付到您的 BEP-20 兼容钱包中，并且时间可能会根据请求和执行的时间而有所不同。 QuByChain 可能会自行决定收取提款费或最低交易金额，并且会不时发生变化。 QuByChain 不对因代币实际交付的时间差异而造成的任何损失承担责任。您承认并同意 QuByChain 保留随时自行决定修改与任何特定 Stake 计划相关的任何条款的权利。由于您对Stake计划条款的误解以及该条款规则的变更而造成的任何损失，QuByChain不承担任何责任",
+  "Next": "下一页",
+  "Prev": "上一页",
+  "Warning": "解质押后，您必须等待7天，然后才能提取您的 $QUBYAI 和奖励。",
+  "Warning_Title": "警告",
+  "Amount_to_unstack": "解质押数量",
+  "initialize_Unstack": "初始化解质押",
+  "initialize_Withdrawal": "初始化提取",
+  "Checkpoint5_Title": "7天等待期已过",
+  "Checkpoint6_Title": "您已解质押您的 QuBy AI"
 }
