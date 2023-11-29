@@ -249,7 +249,7 @@ const Navbar = () => {
               <p className="text-white-main font-semibold sm:text-base text-sm">
                 {activeLanguage.name}
               </p>
-              <FiChevronDown className="text-white-main text-2xl" />
+              <FiChevronDown className="text-white-main text-2xl flex-shrink-0" />
             </div>
             <div
               ref={dropDownRef}
