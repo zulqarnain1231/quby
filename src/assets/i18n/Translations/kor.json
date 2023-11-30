@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai 입금 가능",
   "Checkpoint2_Detail": "현재 잔액: 0.00000",
   "Checkpoint3_Title": "지갑에 있는 이더리움 (ETH)",
-  "Checkpoint3_Detail": "ETH는 이더리움에서 수수료를 지불합니다. ETH 잔액: 0.00000",
+  "Checkpoint3_Detail": "ETH는 Ethereum 네트워크에서 거래 수수료를 지불해야 합니다.ETH 잔액 0.0000",
   "Checkpoint4_Title": "스테이크 가능",
   "Checkpoint4_Detail": "활성화된 QUBYAI 언스테이크/출금 요청이 있는 경우 스테이크할 수 없습니다",
   "Have_Read": "다음을 읽었습니다",
@@ -133,5 +133,7 @@
   "initialize_Unstack": "언스테이킹 초기화",
   "initialize_Withdrawal": "인출 초기화",
   "Checkpoint5_Title": "7일 대기 기간이 경과했습니다",
-  "Checkpoint6_Title": "QuBy AI를 언스테이킹했습니다"
+  "Checkpoint6_Title": "QuBy AI를 언스테이킹했습니다",
+  "UnStake_your_QUBYAI": "귀하의 QUBYAI 언스테이크",
+  "Withdraw_your_QUBYAI": "귀하의 QUBYAI 인출"
 }

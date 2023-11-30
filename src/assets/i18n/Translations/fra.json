@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai disponible pour déposer",
   "Checkpoint2_Detail": "Solde actuel : 0.00000",
   "Checkpoint3_Title": "ETH disponible dans le portefeuille",
-  "Checkpoint3_Detail": "L'ETH paie les frais sur Ethereum. Solde ETH : 0.00000",
+  "Checkpoint3_Detail": "L’ETH est tenu de payer des frais de transaction sur le réseau Ethereum.Solde ETH 0,0000",
   "Checkpoint4_Title": "Éligible pour miser",
   "Checkpoint4_Detail": "Vous ne pouvez pas miser si vous avez une demande de désenpilage/retrait active pour QUBYAI",
   "Have_Read": "J'ai lu les",
@@ -132,5 +132,7 @@
   "initialize_Unstack": "Initialiser le désengagement",
   "initialize_Withdrawal": "Initialiser le retrait",
   "Checkpoint5_Title": "Période d'attente de 7 jours écoulée",
-  "Checkpoint6_Title": "Vous avez désengagé votre QuBy AI"
+  "Checkpoint6_Title": "Vous avez désengagé votre QuBy AI",
+  "UnStake_your_QUBYAI": "Retirez votre QUBYAI mis en jeu",
+  "Withdraw_your_QUBYAI": "Retirez votre QUBYAI"
 }

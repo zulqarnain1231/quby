@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai доступен для депозита",
   "Checkpoint2_Detail": "Текущий баланс: 0.00000",
   "Checkpoint3_Title": "ETH доступен в кошельке",
-  "Checkpoint3_Detail": "ETH оплачивает комиссии на Ethereum. Баланс ETH: 0.00000",
+  "Checkpoint3_Detail": "ETH необходим для оплаты комиссий за транзакции в сети Ethereum.Баланс ETH 0.0000",
   "Checkpoint4_Title": "Доступно для ставки",
   "Checkpoint4_Detail": "Нельзя поставить, если у вас есть активный запрос на снятие/вывод QUBYAI",
   "Have_Read": "Я прочитал(а)",
@@ -132,5 +132,7 @@
   "initialize_Unstack": "Инициализировать открепление",
   "initialize_Withdrawal": "Инициализировать вывод",
   "Checkpoint5_Title": "Прошло 7 дней ожидания",
-  "Checkpoint6_Title": "Вы открепили свой QuBy AI"
+  "Checkpoint6_Title": "Вы открепили свой QuBy AI",
+  "UnStake_your_QUBYAI": "Снимите ставку с QUBYAI",
+  "Withdraw_your_QUBYAI": "Выведите свой QUBYAI"
 }

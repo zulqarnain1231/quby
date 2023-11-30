@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "可供存入的QuBy Ai",
   "Checkpoint2_Detail": "当前余额：0.00000",
   "Checkpoint3_Title": "钱包中的可用ETH",
-  "Checkpoint3_Detail": "ETH支付以太坊上的费用。ETH余额：0.00000",
+  "Checkpoint3_Detail": "以太坊网络上需要使用 ETH 来支付交易费用。ETH 余额 0.0000",
   "Checkpoint4_Title": "有资格质押",
   "Checkpoint4_Detail": "如果您有活动的QUBYAI解锁/提取请求，您将无法质押",
   "Have_Read": "我已阅读",
@@ -132,5 +132,7 @@
   "initialize_Unstack": "初始化解质押",
   "initialize_Withdrawal": "初始化提取",
   "Checkpoint5_Title": "7天等待期已过",
-  "Checkpoint6_Title": "您已解质押您的 QuBy AI"
+  "Checkpoint6_Title": "您已解质押您的 QuBy AI",
+  "UnStake_your_QUBYAI": "解除质押你的QUBYAI",
+  "Withdraw_your_QUBYAI": "提取你的QUBYAI"
 }

@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai をデポジットできる",
   "Checkpoint2_Detail": "現在の残高：0.00000",
   "Checkpoint3_Title": "ウォレットに利用可能な ETH",
-  "Checkpoint3_Detail": "ETH は Ethereum 上で手数料を支払います。ETH 残高：0.00000",
+  "Checkpoint3_Detail": "ETHはイーサリアムネットワーク上で取引手数料を支払う必要があります。ETH残高 0.0000",
   "Checkpoint4_Title": "ステーク対象",
   "Checkpoint4_Detail": "QUBYAI のアンステーク／引き出しリクエストがアクティブな場合はステークできません",
   "Have_Read": "私は次を読みました",
@@ -132,5 +132,7 @@
   "initialize_Unstack": "アンステークの初期化",
   "initialize_Withdrawal": "引き出しの初期化",
   "Checkpoint5_Title": "7日間の待機期間が経過しました",
-  "Checkpoint6_Title": "QuBy AIをアンステークしました"
+  "Checkpoint6_Title": "QuBy AIをアンステークしました",
+  "UnStake_your_QUBYAI": "あなたのQUBYAIをアンステーク",
+  "Withdraw_your_QUBYAI": "あなたのQUBYAIを引き出す"
 }

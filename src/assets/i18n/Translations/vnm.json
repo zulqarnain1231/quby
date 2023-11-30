@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai có sẵn để gửi tiền",
   "Checkpoint2_Detail": "Số Dư Hiện Tại: 0.00000",
   "Checkpoint3_Title": "ETH có sẵn trong ví",
-  "Checkpoint3_Detail": "ETH trả phí trên Ethereum. Số Dư ETH: 0.00000",
+  "Checkpoint3_Detail": "ETH được yêu cầu phải trả phí giao dịch trên mạng Ethereum.Số dư ETH 0,0000",
   "Checkpoint4_Title": "Đủ Điều Kiện Đặt Cược",
   "Checkpoint4_Detail": "Bạn không thể đặt cược nếu có yêu cầu rút/đặt cược QUBYAI đang hoạt động",
   "Have_Read": "Tôi đã đọc",
@@ -132,5 +132,7 @@
   "initialize_Unstack": "Khởi tạo Unstack",
   "initialize_Withdrawal": "Khởi tạo Rút",
   "Checkpoint5_Title": "Đã qua 7 ngày chờ đợi",
-  "Checkpoint6_Title": "Bạn đã Unstaked QuBy AI của mình"
+  "Checkpoint6_Title": "Bạn đã Unstaked QuBy AI của mình",
+  "UnStake_your_QUBYAI": "Hủy cược QUBYAI của bạn",
+  "Withdraw_your_QUBYAI": "Rút QUBYAI của bạn"
 }

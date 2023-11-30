@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai ile Yatırım Yapılabilir Durumda",
   "Checkpoint2_Detail": "Mevcut Bakiye: 0.00000",
   "Checkpoint3_Title": "Cüzdanda Kullanılabilir ETH Bulunuyor",
-  "Checkpoint3_Detail": "ETH, Ethereum üzerinde ücret öder. ETH Bakiye: 0.00000",
+  "Checkpoint3_Detail": "ETH'nin, Ethereum ağındaki işlem ücretlerini ödemesi gerekmektedir.ETH bakiyesi 0,0000",
   "Checkpoint4_Title": "Stake Yapmaya Uygun",
   "Checkpoint4_Detail": "Eğer aktif bir QUBYAI unstake/withdrawal talebiniz varsa stake yapamazsınız",
   "Have_Read": "Ben okudum",
@@ -132,5 +132,7 @@
   "initialize_Unstack": "Unstaking'i başlat",
   "initialize_Withdrawal": "Çekme işlemini başlat",
   "Checkpoint5_Title": "7 günlük bekleme süresi geçti",
-  "Checkpoint6_Title": "QuBy AI'nızı Unstaked yaptınız"
+  "Checkpoint6_Title": "QuBy AI'nızı Unstaked yaptınız",
+  "UnStake_your_QUBYAI": "QUBYAI'nizi çözün",
+  "Withdraw_your_QUBYAI": "QUBYAI'nizi çekin"
 }

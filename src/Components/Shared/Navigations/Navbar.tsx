@@ -177,14 +177,14 @@ const Navbar = () => {
       <ComponentWrapper style="bg-trasparent h-[80px] z-50">
         <nav className="w-full h-full flex items-center justify-between relative z-50">
           <div className="h-full flex items-center justify-start gap-8">
-            <a href="/">
+            <Link to={"/"}>
               {" "}
               <img
                 src="/Assets/Logo.png"
                 className="sm:w-[200px] w-[160px] h-[64px] object-contain cursor-pointer"
                 alt=""
               />
-            </a>
+            </Link>
             <a
               href="https://www.qubyaigame.com/"
               target="_blank"
@@ -225,7 +225,7 @@ const Navbar = () => {
             {Router.pathname == "/stacking" ? (
               <FilledBtn
                 text={t("Buy_Token")}
-                link="https://www.qubyaigame.com/"
+                link="https://www.qubyai.com/"
                 padding="px-9 py-4 lg:inline-block hidden"
               />
             ) : (
@@ -323,7 +323,7 @@ const Navbar = () => {
             onClick={toggleDrawer}
             to={
               Router.pathname == "/stacking"
-                ? "https://www.qubyaigame.com/"
+                ? "https://www.qubyai.com/"
                 : "/stacking"
             }
           >

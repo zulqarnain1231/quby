@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai disponível para depósito",
   "Checkpoint2_Detail": "Saldo Atual: 0.00000",
   "Checkpoint3_Title": "ETH disponível na carteira",
-  "Checkpoint3_Detail": "ETH paga taxas na Ethereum. Saldo de ETH: 0.00000",
+  "Checkpoint3_Detail": "A ETH é obrigada a pagar taxas de transação na rede Ethereum.Saldo ETH 0,0000",
   "Checkpoint4_Title": "Elegível para apostar",
   "Checkpoint4_Detail": "Você não pode apostar se tiver uma solicitação ativa de desapostar/retirar QUBYAI",
   "Have_Read": "Eu li os",
@@ -132,5 +132,7 @@
   "initialize_Unstack": "Inicializar desbloqueio",
   "initialize_Withdrawal": "Inicializar retirada",
   "Checkpoint5_Title": "Período de espera de 7 dias decorrido",
-  "Checkpoint6_Title": "Você desbloqueou seu QuBy AI"
+  "Checkpoint6_Title": "Você desbloqueou seu QuBy AI",
+  "UnStake_your_QUBYAI": "Desfaça a sua aposta em QUBYAI",
+  "Withdraw_your_QUBYAI": "Retire o seu QUBYAI"
 }

@@ -10,11 +10,11 @@ const OutlineBtn: React.FC<Props> = ({ text, event, isActive }) => {
   return (
     <button
       onClick={event}
-      className={`px-[35px] py-[11px] sm:w-auto w-full border ${
+      className={` py-[11px] px-9 sm:w-auto w-full border ${
         isActive
-          ? "border-brand-main text-brand-main"
-          : "border-white-main text-white-main"
-      } rounded-[30px] text-lg sm:text-xl  font-medium hover:duration-300 hover:border-brand-main hover:text-brand-main`}
+          ? "border-brand-main text-brand-main font-semibold"
+          : "border-white-main text-white-main font-medium"
+      } rounded-[30px] text-lg sm:text-xl hover:duration-300 hover:border-brand-main hover:text-brand-main`}
     >
       {text}
     </button>

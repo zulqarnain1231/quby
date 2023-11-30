@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai beschikbaar om te storten",
   "Checkpoint2_Detail": "Huidig saldo: 0.00000",
   "Checkpoint3_Title": "ETH beschikbaar in portemonnee",
-  "Checkpoint3_Detail": "ETH betaalt kosten op Ethereum. ETH-saldo: 0.00000",
+  "Checkpoint3_Detail": "ETH is vereist om transactiekosten op het Ethereum-netwerk te betalen.ETH-saldo 0,0000",
   "Checkpoint4_Title": "Gerechtigd om in te zetten",
   "Checkpoint4_Detail": "U kunt niet inzetten als u een actief QUBYAI ontstapelings-/opnameverzoek heeft",
   "Have_Read": "Ik heb de",
@@ -132,5 +132,7 @@
   "initialize_Unstack": "Unstaken initialiseren",
   "initialize_Withdrawal": "Opname initialiseren",
   "Checkpoint5_Title": "Wachttijd van 7 dagen verstreken",
-  "Checkpoint6_Title": "U heeft uw QuBy AI unstaked"
+  "Checkpoint6_Title": "U heeft uw QuBy AI unstaked",
+  "UnStake_your_QUBYAI": "Ontgrendel je QUBYAI",
+  "Withdraw_your_QUBYAI": "Neem je QUBYAI op"
 }

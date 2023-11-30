@@ -57,7 +57,11 @@ const Steps: React.FC<Props> = ({ activeTab }: Props) => {
   return (
     <div className="w-full flex flex-col items-start justify-start gap-10">
       <h1 className="text-white-main sm:text-5xl text-4xl font-bold lg:text-left text-center">
-        {t("Stake_your_QUBYAI")}
+        {activeTab.stake
+          ? t("Stake_your_QUBYAI")
+          : activeTab.unstack
+          ? t("UnStake_your_QUBYAI")
+          : t("Withdraw_your_QUBYAI")}
       </h1>
       {activeTab.stake && (
         <div className="w-full max-w-full flex min-[600px]:flex-row flex-col min-[600px]:items-center items-start min-[600px]:justify-between lg:gap-4 gap-2 border border-white-main sm:px-8 px-6 py-4 sm:py-[18px] rounded-lg overflow-auto">

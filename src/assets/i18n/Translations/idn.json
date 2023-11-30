@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai tersedia untuk disetor",
   "Checkpoint2_Detail": "Saldo saat ini: 0.00000",
   "Checkpoint3_Title": "ETH tersedia di dompet",
-  "Checkpoint3_Detail": "ETH membayar biaya di Ethereum. Saldo ETH: 0.00000",
+  "Checkpoint3_Detail": "ETH diharuskan membayar biaya transaksi di jaringan Ethereum.Saldo ETH 0,0000",
   "Checkpoint4_Title": "Memenuhi syarat untuk bertaruh",
   "Checkpoint4_Detail": "Anda tidak dapat bertaruh jika memiliki permintaan pembatalan/tarik QUBYAI yang sedang aktif",
   "Have_Read": "Saya sudah membaca",
@@ -132,5 +132,7 @@
   "initialize_Unstack": "Inisialisasi Pembatalan Staking",
   "initialize_Withdrawal": "Inisialisasi Penarikan",
   "Checkpoint5_Title": "Telah berlalu 7 hari periode menunggu",
-  "Checkpoint6_Title": "Anda telah Membatalkan Staking QuBy AI Anda"
+  "Checkpoint6_Title": "Anda telah Membatalkan Staking QuBy AI Anda",
+  "UnStake_your_QUBYAI": "Tarik kembali QUBYAI Anda",
+  "Withdraw_your_QUBYAI": "Tarik QUBYAI Anda"
 }

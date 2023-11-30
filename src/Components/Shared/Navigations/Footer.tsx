@@ -87,7 +87,7 @@ const Footer = () => {
         <div className="w-full flex lg:flex-row flex-col items-start justify-start gap-8 lg:gap-0 lg:justify-between py-8 border-t border-b border-t-white-main border-b-white-main">
           {/* left side */}
           <div className="flex flex-col items-start justify-start gap-5">
-            <a href="/">
+            <a href={"/"}>
               <img
                 src="/Assets/Logo.png"
                 className="w-[172px] h-[52px] object-contain"

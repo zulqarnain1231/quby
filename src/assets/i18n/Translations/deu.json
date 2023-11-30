@@ -80,7 +80,7 @@
   "Checkpoint2_Title": "QuBy Ai verfügbar zum Einzahlen",
   "Checkpoint2_Detail": "Aktuelles Guthaben: 0.00000",
   "Checkpoint3_Title": "ETH im Wallet verfügbar",
-  "Checkpoint3_Detail": "ETH zahlt Gebühren auf Ethereum. ETH-Guthaben: 0.00000",
+  "Checkpoint3_Detail": "ETH ist verpflichtet, Transaktionsgebühren im Ethereum-Netzwerk zu zahlen.ETH-Guthaben 0,0000",
   "Checkpoint4_Title": "Berechtigt zum Setzen",
   "Checkpoint4_Detail": "Sie können nicht setzen, wenn Sie eine aktive QUBYAI-Entstapel-/Abhebeanfrage haben",
   "Have_Read": "Ich habe die",
@@ -102,5 +102,7 @@
   "initialize_Unstack": "Entstaken initialisieren",
   "initialize_Withdrawal": "Abhebung initialisieren",
   "Checkpoint5_Title": "7-tägige Wartezeit abgelaufen",
-  "Checkpoint6_Title": "Sie haben Ihr QuBy AI entstakt"
+  "Checkpoint6_Title": "Sie haben Ihr QuBy AI entstakt",
+  "UnStake_your_QUBYAI": "Hebe deine QUBYAI-Wette auf",
+  "Withdraw_your_QUBYAI": "Hebe deine QUBYAI ab"
 }
