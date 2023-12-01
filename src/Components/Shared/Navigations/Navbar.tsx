@@ -255,7 +255,7 @@ const Navbar = () => {
               ref={dropDownRef}
               className={`${
                 isDropDown ? "flex" : "hidden"
-              } flex-col absolute -bottom-[585px] right-0 z-50 items-center justify-start gap-1 bg-white-main rounded-md py-3`}
+              } flex-col absolute -bottom-[405px] h-[400px] HideScroll right-0 z-50 items-center justify-start gap-1 bg-white-main rounded-md py-3 overflow-auto`}
             >
               {languages.map((item: any, index: number) => (
                 <button

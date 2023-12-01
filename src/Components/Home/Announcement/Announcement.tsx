@@ -13,7 +13,10 @@ const Announcement = () => {
       "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@qubyai.meme"
     )
       .then((response) => response.json())
-      .then((result) => setArticles(result.items.slice(0, 2)))
+      .then((result) => {
+        console.log(result);
+        setArticles(result.items.slice(0, 2));
+      })
       .catch((error) => console.log("error", error));
   }, []);
 
