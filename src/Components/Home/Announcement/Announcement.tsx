@@ -14,7 +14,7 @@ const Announcement = () => {
     )
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         setArticles(result.items.slice(0, 2));
       })
       .catch((error) => console.log("error", error));
