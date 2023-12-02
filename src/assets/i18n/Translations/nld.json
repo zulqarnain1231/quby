@@ -76,7 +76,7 @@
   "Checkpoint": "Controlepunt",
   "Checkpoint_Detail": "De volgende voorwaarden moeten worden voldaan om door te gaan:",
   "Checkpoint1_Title": "Verbonden met MetaMask",
-  "Checkpoint1_Detail": "Als niet verbonden, klik op de Verbind Wallet-knop in de rechterbovenhoek",
+  "Checkpoint1_Detail": "Als niet verbonden, klik op de Verbind Wallet-knop",
   "Checkpoint2_Title": "QuBy Ai beschikbaar om te storten",
   "Checkpoint2_Detail": "Huidig saldo: 0.00000",
   "Checkpoint3_Title": "ETH beschikbaar in portemonnee",

@@ -15,7 +15,7 @@ const TermsModal: React.FC<Props> = ({ isOpen, setIsOpen }: Props) => {
         <h2 className="text-white-main sm:text-2xl text-xl text-center font-semibold">
           {t("Terms_and_Conditions")}
         </h2>
-        <p className="text-white-main text-base font-medium">
+        <p className="text-white-main text-[13.2px] font-medium">
           {t("Terms_Conditions_Detail")}
         </p>
       </div>

@@ -76,7 +76,7 @@
   "Checkpoint": "Checkpoint",
   "Checkpoint_Detail": "The following conditions must be met to proceed:",
   "Checkpoint1_Title": "Connected with MetaMask",
-  "Checkpoint1_Detail": "If not connected, click the Connect Wallet button in the top right corner",
+  "Checkpoint1_Detail": "If not connected, click the Connect Wallet button",
   "Checkpoint2_Title": "QuBy Ai available to deposit",
   "Checkpoint2_Detail": "Current Balance : 0.00000",
   "Checkpoint3_Title": "ETH available in wallet",
